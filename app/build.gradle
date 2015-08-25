@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "ng.lyf.lyflisting"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi 22
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.github.triplet.simpleprovider:simpleprovider:1.1.0'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.1'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.android.support:cardview-v7:22.0.0'
+    compile 'tk.zielony:carbon:0.8.0'
+}

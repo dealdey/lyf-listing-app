@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">LyfListing</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="no_activity_to_share">No application available to share the experience</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="bank_name">
+        <item>GTBank</item>
+        <item>First Bank</item>
+        <item>Diamond Bank</item>
+        <item>Skype</item>
+        <item>Stanbic IBTC</item>
+    </string-array>
+    <string name="bank_prompt">Bank Name</string>
+
+    <string-array name="account_type">
+        <item>Savings</item>
+        <item>Current</item>
+    </string-array>
+    <string name="account_prompt">Account Type</string>
+
+</resources>
