@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.utils;
+package ng.lyf.lyflisting.utils.others;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

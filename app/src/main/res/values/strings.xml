@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">LyfListing</string>
+    <string name="app_name">Lyf Listing</string>
+
+    <!-- Google Tag Manager Container ID -->
+    <string name="google_tag_manager_container_id_prod">GTM-PW7GFD</string>
+    <string name="google_tag_manager_container_id_debug">GTM-NGVKD4</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -21,5 +25,7 @@
         <item>Current</item>
     </string-array>
     <string name="account_prompt">Account Type</string>
+
+
 
 </resources>

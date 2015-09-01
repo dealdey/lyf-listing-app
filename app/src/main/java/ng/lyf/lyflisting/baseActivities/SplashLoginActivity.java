@@ -1,7 +1,6 @@
-package ng.lyf.lyflisting;
+package ng.lyf.lyflisting.baseActivities;
 
 import android.animation.LayoutTransition;
-import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -16,13 +15,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import ng.lyf.lyflisting.utils.Common;
-import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
+import carbon.widget.LinearLayout;
+import ng.lyf.lyflisting.R;
+import ng.lyf.lyflisting.utils.analytics.GoogleTagManagerHelper;
+import ng.lyf.lyflisting.utils.others.Common;
 
 public class SplashLoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -47,7 +47,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     private Button showSignUpFormButton;
     private Button showSignInFormButton;
     private Button forgetPasswordButton;
-    private View splashProgress;
+    private View defaultSplashProgress;
     private View signInProgressBar;
     private View signUpProgressBar;
     private View signUpForm;
@@ -61,7 +61,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_login);
 
-        splashProgress = findViewById(R.id.defaultSplashProgressBar);
+        defaultSplashProgress = findViewById(R.id.defaultSplashProgressBar);
         signInProgressBar = findViewById(R.id.signInProgressBar);
         signUpProgressBar = findViewById(R.id.signUpProgressBar);
         enterForm = (ScrollView) findViewById(R.id.enterForm);
@@ -174,15 +174,19 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
             }
         });
 
-        animateLogoThenRevealSignIn();
+        backgroundInitializer();
     }
 
-    public void animateLogoThenRevealSignIn() {
+    public void backgroundInitializer() {
+        GoogleTagManagerHelper.initializeTagManager(this);
+
         new Thread() {
             public void run() {
+                fetchInitDataFromServer();
+
                 try {
                     int waited = 0;
-                    while (waited < 1000) {
+                    while (waited < 2000) {
                         sleep(100);
                         waited += 100;
                     }
@@ -193,7 +197,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
                         @Override
                         public void run() {
                             if (true) {
-                                revealSignIn();
+                                revealSignInForm();
                             } else {
 //                                startActivity(new Intent(SplashLogin.this, MainActivity.class));
                                 finish();
@@ -206,15 +210,21 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         }.start();
     }
 
-    public void revealSignIn() {
+    private void fetchInitDataFromServer() {
+    }
+
+    public void revealSignInForm() {
         //Animate and hide the default progress bar.
-        splashProgress.animate().alpha(0f).setDuration(700);
-        splashProgress.setVisibility(View.GONE);
-        
+        defaultSplashProgress.animate().alpha(0f).setDuration(700);
+        defaultSplashProgress.setVisibility(View.GONE);
+
+        //Animate and show login form
         enterForm.setAlpha(0f);
         enterForm.setVisibility(View.VISIBLE);
-        final ImageView imageView = (ImageView) findViewById(R.id.logoImage);
-        imageView.animate().setDuration(400);
+
+        final LinearLayout logoArea = (LinearLayout) findViewById(R.id.logoArea);
+        logoArea.animate().setDuration(700);
+
         enterForm.animate().alpha(1f).setDuration(700).setListener(null);
         Common.hideKeyboard(this, enterForm);
     }

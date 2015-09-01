@@ -14,9 +14,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import ng.lyf.lyflisting.MainActivity;
+import ng.lyf.lyflisting.baseActivities.MainActivity;
 import ng.lyf.lyflisting.R;
-import ng.lyf.lyflisting.utils.Common;
+import ng.lyf.lyflisting.utils.others.Common;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 
 /**

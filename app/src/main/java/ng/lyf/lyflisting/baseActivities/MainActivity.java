@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting;
+package ng.lyf.lyflisting.baseActivities;
 
 import android.animation.LayoutTransition;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.fragment.ForgotPasswordFragment;
 import ng.lyf.lyflisting.fragment.ResetPasswordFragment;
 import ng.lyf.lyflisting.fragment.UpdateBankDetailsFragment;

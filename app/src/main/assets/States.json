@@ -1,0 +1,691 @@
+[
+    {
+        "id": 16,
+        "name": "Lagos",
+        "highlight": true,
+        "areas": [
+            {
+                "id": 821,
+                "name": "Amuwo-Odofin"
+            },
+            {
+                "id": 822,
+                "name": "Apapa-Iganmu"
+            },
+            {
+                "id": 823,
+                "name": "Bariga"
+            },
+            {
+                "id": 824,
+                "name": "Coker/Aguda"
+            },
+            {
+                "id": 825,
+                "name": "Lekki (Ajah)"
+            },
+            {
+                "id": 826,
+                "name": "Ikeja"
+            },
+            {
+                "id": 827,
+                "name": "Ikoyi/Obalende"
+            },
+            {
+                "id": 828,
+                "name": "Kosofe"
+            },
+            {
+                "id": 829,
+                "name": "Lagos Island"
+            },
+            {
+                "id": 830,
+                "name": "Lekki (Phase 1)"
+            },
+            {
+                "id": 831,
+                "name": "Lekki (Ibeju)"
+            },
+            {
+                "id": 832,
+                "name": "Mushin"
+            },
+            {
+                "id": 833,
+                "name": "Onigbongbo"
+            },
+            {
+                "id": 834,
+                "name": "Oshodi-Isolo"
+            },
+            {
+                "id": 835,
+                "name": "Somolu"
+            },
+            {
+                "id": 836,
+                "name": "Surulere"
+            },
+            {
+                "id": 837,
+                "name": "Victoria Island/Iru"
+            },
+            {
+                "id": 838,
+                "name": "Yaba/Ebute Meta"
+            },
+            {
+                "id": 839,
+                "name": "Agbado/Oke-Odo"
+            },
+            {
+                "id": 840,
+                "name": "Agboyi-Ketu"
+            },
+            {
+                "id": 841,
+                "name": "Agege "
+            },
+            {
+                "id": 842,
+                "name": "Ajeromi/Ifelodun"
+            },
+            {
+                "id": 843,
+                "name": "Alimosho"
+            },
+            {
+                "id": 844,
+                "name": "Ayobo/Ipaja"
+            },
+            {
+                "id": 845,
+                "name": "Badagry"
+            },
+            {
+                "id": 846,
+                "name": "Egbe/Idimu"
+            },
+            {
+                "id": 847,
+                "name": "Ejigbo"
+            },
+            {
+                "id": 848,
+                "name": "Epe"
+            },
+            {
+                "id": 849,
+                "name": "Eredo"
+            },
+            {
+                "id": 850,
+                "name": "Iba"
+            },
+            {
+                "id": 851,
+                "name": "Igando"
+            },
+            {
+                "id": 852,
+                "name": "Igbogbo/Baiyeku"
+            },
+            {
+                "id": 853,
+                "name": "Ijaye /Ojokoro"
+            },
+            {
+                "id": 854,
+                "name": "Ijede"
+            },
+            {
+                "id": 855,
+                "name": "Iju /Ifako"
+            },
+            {
+                "id": 856,
+                "name": "Ikorodu"
+            },
+            {
+                "id": 857,
+                "name": "Ikosi Ejirin"
+            },
+            {
+                "id": 858,
+                "name": "Ikosi Isheri"
+            },
+            {
+                "id": 859,
+                "name": "Imota"
+            },
+            {
+                "id": 860,
+                "name": "Itire /Ikate"
+            },
+            {
+                "id": 861,
+                "name": "Ojo"
+            },
+            {
+                "id": 862,
+                "name": "Ojodu"
+            },
+            {
+                "id": 863,
+                "name": "Olorunda"
+            },
+            {
+                "id": 864,
+                "name": "Oriade"
+            },
+            {
+                "id": 865,
+                "name": "Oto/Awori"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Alimosho",
+        "highlight": true,
+        "areas": []
+    },
+    {
+        "id": 18,
+        "name": "Abuja",
+        "highlight": true,
+        "areas": [
+            {
+                "id": 879,
+                "name": "Maitama"
+            },
+            {
+                "id": 880,
+                "name": "Garki"
+            },
+            {
+                "id": 881,
+                "name": "Wuse"
+            },
+            {
+                "id": 882,
+                "name": "CBD"
+            },
+            {
+                "id": 883,
+                "name": "Asokoro"
+            },
+            {
+                "id": 884,
+                "name": "Gwarimpa"
+            },
+            {
+                "id": 885,
+                "name": "Utako"
+            },
+            {
+                "id": 886,
+                "name": "Gwagwalada"
+            },
+            {
+                "id": 887,
+                "name": "Jabi"
+            },
+            {
+                "id": 888,
+                "name": "Karu"
+            },
+            {
+                "id": 889,
+                "name": "Nyanya"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "New City",
+        "highlight": false,
+        "areas": []
+    },
+    {
+        "id": 20,
+        "name": "Nationwide",
+        "highlight": false,
+        "areas": []
+    },
+    {
+        "id": 21,
+        "name": "Rivers",
+        "highlight": true,
+        "areas": [
+            {
+                "id": 891,
+                "name": "Port Harcourt"
+            },
+            {
+                "id": 892,
+                "name": "Bonny Island"
+            },
+            {
+                "id": 893,
+                "name": "Choba"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Abia",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 868,
+                "name": "Umuahia"
+            },
+            {
+                "id": 869,
+                "name": "Aba"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Bauchi",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 867,
+                "name": "Bauchi"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Oyo",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 820,
+                "name": "Ibadan"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Borno",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 819,
+                "name": "Maiduguri"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Edo",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 911,
+                "name": "Benin City"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Imo",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 904,
+                "name": "Owerri"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Jigawa",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 896,
+                "name": "Dutse"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Anambra",
+        "highlight": false,
+        "areas": []
+    },
+    {
+        "id": 32,
+        "name": "Kwara",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 903,
+                "name": "Ilorin"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Kogi",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 900,
+                "name": "Lokoja"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Osun",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 872,
+                "name": "Oshogbo"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Sokoto",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 901,
+                "name": "Sokoto"
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Plateau",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 871,
+                "name": "Jos"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Yobe",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 890,
+                "name": "Damaturu"
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Taraba",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 878,
+                "name": "Jalingo"
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Zamfara",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 870,
+                "name": "Gusau"
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Kebbi",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 873,
+                "name": "Birnin Kebbi"
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Katsina",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 874,
+                "name": "Katsina"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Niger",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 894,
+                "name": "Minna"
+            },
+            {
+                "id": 895,
+                "name": "Suleja"
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Akwa Ibom",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 876,
+                "name": "Uyo"
+            },
+            {
+                "id": 877,
+                "name": "Eket"
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Bayelsa",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 905,
+                "name": "Yenagoa"
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Adamawa",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 906,
+                "name": "Yola"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Cross River",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 910,
+                "name": "Calabar"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Benue",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 866,
+                "name": "Makurdi"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Delta",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 897,
+                "name": "Asaba"
+            },
+            {
+                "id": 898,
+                "name": "Warri"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Kano",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 909,
+                "name": "Kano"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Ebonyi",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 818,
+                "name": "Abakaliki"
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Kaduna",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 816,
+                "name": "Kaduna"
+            },
+            {
+                "id": 817,
+                "name": "Zaira"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Nassarawa",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 899,
+                "name": "Lafia"
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Ogun",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 814,
+                "name": "Abeokuta"
+            },
+            {
+                "id": 815,
+                "name": "Ijebu Ode"
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Ondo",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 902,
+                "name": "Akure"
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Ekiti",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 875,
+                "name": "Ado Ekiti"
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Enugu",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 908,
+                "name": "Enugu"
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Gombe",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 907,
+                "name": "Gombe"
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Anambra State",
+        "highlight": false,
+        "areas": [
+            {
+                "id": 912,
+                "name": "Awka"
+            },
+            {
+                "id": 913,
+                "name": "Onitsha "
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "name": "jhumro taliya",
+        "highlight": false,
+        "areas": []
+    }
+]

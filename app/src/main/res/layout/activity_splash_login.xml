@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
@@ -7,14 +8,14 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:scaleType="centerCrop">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <carbon.widget.LinearLayout
+        android:id="@+id/logoArea"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_weight="0.4"
+        android:layout_weight="2"
         android:animateLayoutChanges="true"
         android:orientation="horizontal"
         android:visibility="visible">
@@ -30,10 +31,9 @@
     <carbon.widget.ScrollView
         android:id="@+id/enterForm"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_weight="0.8"
-        android:animateLayoutChanges="true"
+        android:layout_weight="1"
         android:scrollbars="none"
         android:visibility="gone">
 
@@ -303,11 +303,12 @@
 
     <carbon.widget.ProgressBar
         android:id="@+id/defaultSplashProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
         android:layout_margin="40dp"
-        android:background="@xml/progress"
         android:indeterminate="true"
-        android:visibility="visible" />
+        app:carbon_barColor="@color/white"
+        app:carbon_progressStyle="circular_indeterminate" />
 
 </carbon.widget.LinearLayout>

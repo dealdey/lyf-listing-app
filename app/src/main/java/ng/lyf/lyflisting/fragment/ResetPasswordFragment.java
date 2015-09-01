@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import ng.lyf.lyflisting.R;
-import ng.lyf.lyflisting.utils.Common;
+import ng.lyf.lyflisting.utils.others.Common;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 
 /**
