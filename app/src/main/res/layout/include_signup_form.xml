@@ -3,7 +3,6 @@
     android:id="@+id/signUpForm"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="100dp"
     android:orientation="vertical"
     android:visibility="gone">
 
@@ -11,8 +10,7 @@
         android:id="@+id/fullName"
         style="@style/edit_text_style"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@color/transparent"
+        android:layout_marginTop="5dp"
         android:gravity="left|center"
         android:hint="Full Name"
         android:inputType="phone" />
@@ -21,8 +19,7 @@
         android:id="@+id/email"
         style="@style/edit_text_style"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@color/transparent"
+        android:layout_marginTop="10dp"
         android:gravity="left|center"
         android:hint="Email"
         android:inputType="textWebEmailAddress" />
@@ -31,79 +28,36 @@
         android:id="@+id/signUpMobile"
         style="@style/edit_text_style"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@color/transparent"
+        android:layout_marginTop="10dp"
         android:gravity="left|center"
         android:hint="Mobile"
         android:inputType="phone" />
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/signUpPassword"
             style="@style/edit_text_style"
-            android:layout_width="0dp"
-            android:layout_marginLeft="8dp"
-            android:layout_weight="0.8"
-            android:background="@color/transparent"
-            android:gravity="left|center"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:drawablePadding="10dp"
+            android:hint="Password (Min. 6 characters)"
+            android:inputType="textPassword"
+            android:paddingRight="40dp" />
 
         <Button
             android:id="@+id/showSignUpPassword"
             style="@style/plain_button_style"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="0.2"
-            android:gravity="right|bottom"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="5dp"
             android:text="SHOW"
             android:textSize="10sp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <Spinner
-        android:id="@+id/bankName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:entries="@array/bank_name"
-        android:gravity="left|center"
-        android:prompt="@string/bank_prompt" />
-
-    <EditText
-        android:id="@+id/accountName"
-        style="@style/edit_text_style"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@color/transparent"
-        android:gravity="left|center"
-        android:hint="Account Name" />
-
-    <EditText
-        android:id="@+id/accountNumber"
-        style="@style/edit_text_style"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@color/transparent"
-        android:gravity="left|center"
-        android:hint="Account Number"
-        android:inputType="number" />
-
-    <Spinner
-        android:id="@+id/accountType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:entries="@array/account_type"
-        android:gravity="left|center"
-        android:prompt="@string/account_prompt" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

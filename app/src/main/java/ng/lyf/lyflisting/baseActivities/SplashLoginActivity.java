@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import ng.lyf.lyflisting.R;
@@ -36,11 +35,6 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     private EditText signUpPasswordEditText;
     private EditText emailEditText;
     private EditText fullNameEditText;
-
-    private Spinner bankNameSpinner;
-    private EditText accountNameEditText;
-    private EditText accountNumberEditText;
-    private Spinner accountTypeSpinner;
 
     private Button signInButton;
     private Button signUpButton;
@@ -130,22 +124,17 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         signUpForm = findViewById(R.id.signUpForm);
         fullNameEditText = (EditText) findViewById(R.id.fullName);
         emailEditText = (EditText) findViewById(R.id.email);
-        accountNameEditText = (EditText) findViewById(R.id.accountName);
-        accountNumberEditText = (EditText) findViewById(R.id.accountNumber);
-
-        bankNameSpinner = (Spinner) findViewById(R.id.bankName);
-        bankNameSpinner.setOnItemSelectedListener(this);
-        accountTypeSpinner = (Spinner) findViewById(R.id.accountType);
-        accountTypeSpinner.setOnItemSelectedListener(this);
 
         signUpMobileEditText = (EditText) findViewById(R.id.signUpMobile);
         signUpPasswordEditText = (EditText) findViewById(R.id.signUpPassword);
-        signUpButton = (Button) findViewById(R.id.signUpButton);
-        RippleEffect.addRippleToView(signUpButton);
-        showSignUpPasswordButton = (Button) findViewById(R.id.showSignUpPassword);
         //A password inputfield font changes by default to monospace, hence the need to change it.
         signUpPasswordEditText.setTypeface(Typeface.create("sans", Typeface.NORMAL));
 
+        signUpButton = (Button) findViewById(R.id.signUpButton);
+        RippleEffect.addRippleToView(signUpButton);
+
+        showSignUpPasswordButton = (Button) findViewById(R.id.showSignUpPassword);
+        RippleEffect.addRippleToView(showSignUpPasswordButton);
         showSignUpPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,15 +157,13 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*if (Common.isValidEditText(fullNameEditText) & Common.isValidEmailEditText(emailEditText)
+                if (Common.isValidEditText(fullNameEditText) & Common.isValidEmailEditText(emailEditText)
                         & Common.isValidPhoneEditText(signUpMobileEditText)
-                        & Common.isValidPasswordEditText(signUpPasswordEditText)
-                        & Common.isValidEditText(bankNameSpinner) & Common.isValidEditText(accountNameEditText)
-                        & Common.isValidEditText(accountNumberEditText) & Common.isValidEditText(accountTypeSpinner)) {
+                        & Common.isValidPasswordEditText(signUpPasswordEditText)) {
                     signUpButton.setVisibility(View.GONE);
                     signUpProgressBar.setVisibility(View.VISIBLE);
                     signUp();
-                }*/
+                }
                 signUp();
             }
         });

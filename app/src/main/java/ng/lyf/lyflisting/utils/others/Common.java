@@ -255,6 +255,21 @@ public class Common {
         }
     }
 
+    public static boolean isValidAccountNumberEditText(EditText editText) {
+        editText.setError(null);
+        if (editText.getText().toString().isEmpty()) {
+            editText.setError("This field is required");
+            editText.requestFocus();
+            return false;
+        } else if (editText.getText().toString().length() == 10) {
+            editText.setError("Must be 10 characters");
+            editText.requestFocus();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public static boolean isValidEmailEditText(EditText editText) {
         editText.setError(null);
         if (editText.getText().toString().isEmpty()) {
