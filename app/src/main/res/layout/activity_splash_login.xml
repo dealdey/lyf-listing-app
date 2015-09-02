@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
@@ -9,32 +9,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <LinearLayout
-        android:id="@+id/logoArea"
+    <ImageView
+        android:id="@+id/logoImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_weight="2"
-        android:animateLayoutChanges="true"
-        android:orientation="horizontal"
-        android:visibility="visible">
-
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/logo" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo"
+        android:visibility="visible" />
 
     <ScrollView
         android:id="@+id/enterForm"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:scrollbars="none"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,16 +36,5 @@
             <include layout="@layout/include_signup_form" />
         </LinearLayout>
     </ScrollView>
+</RelativeLayout>
 
-    <ProgressBar
-        android:id="@+id/defaultSplashProgressBar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        android:layout_margin="40dp"
-        android:indeterminate="true" />
-
-    <!--app:carbon_barColor="@color/white"-->
-    <!--app:carbon_progressStyle="circular_indeterminate"-->
-
-</LinearLayout>
