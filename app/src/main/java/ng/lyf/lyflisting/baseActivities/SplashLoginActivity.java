@@ -1,5 +1,6 @@
 package ng.lyf.lyflisting.baseActivities;
 
+import android.animation.Animator;
 import android.animation.LayoutTransition;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,10 +12,13 @@ import android.text.Html;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -47,7 +51,6 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     private Button showSignUpFormButton;
     private Button showSignInFormButton;
     private Button forgetPasswordButton;
-    private View defaultSplashProgress;
     private View signInProgressBar;
     private View signUpProgressBar;
     private View signUpForm;
@@ -61,7 +64,6 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_login);
 
-        defaultSplashProgress = findViewById(R.id.defaultSplashProgressBar);
         signInProgressBar = findViewById(R.id.signInProgressBar);
         signUpProgressBar = findViewById(R.id.signUpProgressBar);
         enterForm = (ScrollView) findViewById(R.id.enterForm);
@@ -97,6 +99,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
                 if (!isLoading) {
                     signInForm.setVisibility(View.GONE);
                     signUpForm.setVisibility(View.VISIBLE);
+                    enterForm.computeScroll();
                 }
             }
         });
@@ -214,19 +217,25 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     }
 
     public void revealSignInForm() {
-        //Animate and hide the default progress bar.
-        defaultSplashProgress.animate().alpha(0f).setDuration(700);
-        defaultSplashProgress.setVisibility(View.GONE);
-
         //Animate and show login form
         enterForm.setAlpha(0f);
         enterForm.setVisibility(View.VISIBLE);
 
-        final LinearLayout logoArea = (LinearLayout) findViewById(R.id.logoArea);
-        logoArea.animate().setDuration(700);
+        final ImageView logoArea = (ImageView) findViewById(R.id.logoImage);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.splash_translate);
+        logoArea.setAnimation(animation);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) { }
 
-        enterForm.animate().alpha(1f).setDuration(700).setListener(null);
-        Common.hideKeyboard(this, enterForm);
+            @Override
+            public void onAnimationEnd(Animation animation) { enterForm.animate().alpha(1f).setDuration(700);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) { }
+        });
+
     }
 
     public void login(final String email, final String password) {
