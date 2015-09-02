@@ -108,7 +108,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         forgetPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                forgotPassword();
             }
         });
 
@@ -252,6 +252,10 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         intent.putExtra("fragmentName", "verifyPhone");
         startActivity(intent);
         finish();
+    }
+
+    private void forgotPassword() {
+
     }
 
     @Override
