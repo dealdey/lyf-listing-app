@@ -51,17 +51,10 @@
         android:layout_marginTop="5dp"
         android:orientation="vertical">
 
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/ripple_wrapper"
-            style="@style/ripple_view_style"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/verify"
-                style="@style/submit_button_style"
-                android:text="Verify" />
-        </com.balysv.materialripple.MaterialRippleLayout>
+        <Button
+            android:id="@+id/verify"
+            style="@style/submit_button_style"
+            android:text="Verify" />
 
         <ProgressBar
             android:id="@+id/signInProgressBar"

@@ -15,13 +15,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import carbon.widget.LinearLayout;
 import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.utils.analytics.GoogleTagManagerHelper;
+import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 import ng.lyf.lyflisting.utils.others.Common;
 
 public class SplashLoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -78,10 +79,10 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         signInMobileEditText = (EditText) findViewById(R.id.mobile);
         signInPasswordEditText = (EditText) findViewById(R.id.password);
         signInButton = (Button) findViewById(R.id.signInButton);
-//        RippleEffect.addRippleToView(signInButton);
+        RippleEffect.addRippleToView(signInButton);
 
         showSignInPasswordButton = (Button) findViewById(R.id.showSignInPassword);
-
+        RippleEffect.addRippleToView(showSignInPasswordButton);
         showSignInPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +92,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
 
         showSignUpFormButton = (Button) findViewById(R.id.showSignUpForm);
         showSignUpFormButton.setText(Html.fromHtml("New here? <font color='#E94B0A'>Sign Up!</font>"));
+        RippleEffect.addRippleToView(showSignUpFormButton);
         showSignUpFormButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,16 +104,21 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         });
 
         forgetPasswordButton = (Button) findViewById(R.id.forgetPassword);
+        RippleEffect.addRippleToView(forgetPasswordButton);
+        forgetPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         //A password inputfield font changes by default to monospace, hence the need to change it.
         signInPasswordEditText.setTypeface(Typeface.create("sans", Typeface.NORMAL));
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(signInMobileEditText.getText()) || TextUtils.isEmpty(signInPasswordEditText.getText())) {
-                    signInMobileEditText.setError("Invalid Email");
-                    signInPasswordEditText.setError("Invalid Password ");
-                } else {
+                if (Common.isValidPhoneEditText(signInMobileEditText)  & Common.isValidPasswordEditText(signInPasswordEditText)) {
                     signInButton.setVisibility(View.GONE);
                     signInProgressBar.setVisibility(View.VISIBLE);
                     login(signInMobileEditText.getText().toString(), signInPasswordEditText.getText().toString());
@@ -134,7 +141,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         signUpMobileEditText = (EditText) findViewById(R.id.signUpMobile);
         signUpPasswordEditText = (EditText) findViewById(R.id.signUpPassword);
         signUpButton = (Button) findViewById(R.id.signUpButton);
-//        RippleEffect.addRippleToView(signUpButton);
+        RippleEffect.addRippleToView(signUpButton);
         showSignUpPasswordButton = (Button) findViewById(R.id.showSignUpPassword);
         //A password inputfield font changes by default to monospace, hence the need to change it.
         signUpPasswordEditText.setTypeface(Typeface.create("sans", Typeface.NORMAL));

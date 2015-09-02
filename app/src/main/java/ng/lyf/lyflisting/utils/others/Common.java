@@ -233,6 +233,7 @@ public class Common {
         editText.setError(null);
         if (editText.getText().toString().isEmpty()) {
             editText.setError("This field is required");
+            editText.requestFocus();
             return false;
         } else {
             return true;
@@ -243,9 +244,11 @@ public class Common {
         editText.setError(null);
         if (editText.getText().toString().isEmpty()) {
             editText.setError("This field is required");
+            editText.requestFocus();
             return false;
         } else if (editText.getText().toString().length() < 6) {
             editText.setError("Must be more than 6 characters");
+            editText.requestFocus();
             return false;
         } else {
             return true;
@@ -256,9 +259,11 @@ public class Common {
         editText.setError(null);
         if (editText.getText().toString().isEmpty()) {
             editText.setError("This field is required");
+            editText.requestFocus();
             return false;
-        } else if (validateStringWithRegex(editText.getText().toString(), MOBILE_REGEX)) {
+        } else if (!validateStringWithRegex(editText.getText().toString(), EMAIL_REGEX)) {
             editText.setError("Must be a valid email address");
+            editText.requestFocus();
             return false;
         } else {
             return true;
@@ -269,9 +274,11 @@ public class Common {
         editText.setError(null);
         if (editText.getText().toString().isEmpty()) {
             editText.setError("This field is required");
+            editText.requestFocus();
             return false;
-        } else if (validateStringWithRegex(editText.getText().toString(), MOBILE_REGEX)) {
+        } else if (!validateStringWithRegex(editText.getText().toString(), MOBILE_REGEX)) {
             editText.setError("Must be a valid phone number");
+            editText.requestFocus();
             return false;
         } else {
             return true;

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signInForm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/mobile"
+            style="@style/edit_text_style"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="10dp"
+            android:hint="Mobile"
+            android:inputType="phone" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/edit_text_style"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingRight="40dp" />
+
+        <Button
+            android:id="@+id/showSignInPassword"
+            style="@style/plain_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:text="SHOW"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/forgetPassword"
+        style="@style/plain_button_style"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.2"
+        android:gravity="right|center"
+        android:text="forgot password?" />
+
+    <LinearLayout
+        android:id="@+id/sectionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/signInButton"
+            style="@style/submit_button_style"
+            android:text="SIGN IN" />
+
+        <ProgressBar
+            android:id="@+id/signInProgressBar"
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/showSignUpForm"
+        style="@style/plain_button_style"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text="New here? Sign Up!" />
+</LinearLayout>
