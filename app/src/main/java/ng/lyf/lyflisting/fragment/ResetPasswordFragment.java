@@ -3,15 +3,17 @@ package ng.lyf.lyflisting.fragment;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import ng.lyf.lyflisting.R;
-import ng.lyf.lyflisting.utils.others.Common;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
+import ng.lyf.lyflisting.utils.others.Common;
 
 /**
  * A placeholder ng.lyf.lyflisting.fragment containing a simple view.
@@ -53,17 +55,31 @@ public class ResetPasswordFragment extends Fragment {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Common.isValidEditText(passwordResetEditText) & Common.isValidPasswordEditText(passwordEditText)) {
+                if (Common.isValid6CharsMinEditText(passwordResetEditText) & Common.isValid6CharsMinEditText(passwordEditText)) {
                     //save();
+                    Toast.makeText(getActivity(), "Successfully reset your password", Toast.LENGTH_LONG).show();
+                    getActivity().finish();
+
+                    String method = getActivity().getIntent().getStringExtra("callOrigin");
+                    if (method != null) {
+                        if (method.equals("SplashScreen")) {
+//                            showFragment(new UpdateBankDetailsFragment());
+                        } else {
+                            getActivity().finish();
+                        }
+                    }
+
                 }
             }
         });
 
         resendResetCodeButton = (Button) view.findViewById(R.id.resendResetCode);
+        resendResetCodeButton.setText(Html.fromHtml("<font color='#E94B0A'>Click here</font> to resend reset code"));
+        RippleEffect.addRippleToView(resendResetCodeButton);
         resendResetCodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //resendCode();
+                getActivity().onBackPressed();
             }
         });
 

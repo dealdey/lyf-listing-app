@@ -112,7 +112,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValidPasswordEditText(signInPasswordEditText)) {
+                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValid6CharsMinEditText(signInPasswordEditText)) {
                     signInButton.setVisibility(View.GONE);
                     signInProgressBar.setVisibility(View.VISIBLE);
                     login(signInMobileEditText.getText().toString(), signInPasswordEditText.getText().toString());
@@ -159,7 +159,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
             public void onClick(View v) {
                 if (Common.isValidEditText(fullNameEditText) & Common.isValidEmailEditText(emailEditText)
                         & Common.isValidPhoneEditText(signUpMobileEditText)
-                        & Common.isValidPasswordEditText(signUpPasswordEditText)) {
+                        & Common.isValid6CharsMinEditText(signUpPasswordEditText)) {
                     signUpButton.setVisibility(View.GONE);
                     signUpProgressBar.setVisibility(View.VISIBLE);
                     signUp();
@@ -232,6 +232,10 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     }
 
     public void login(final String email, final String password) {
+        Intent intent = new Intent(SplashLoginActivity.this, MainActivity.class);
+        intent.putExtra("fragmentName", "verifyPhone");
+        startActivity(intent);
+        finish();
     }
 
     private void signUp() {

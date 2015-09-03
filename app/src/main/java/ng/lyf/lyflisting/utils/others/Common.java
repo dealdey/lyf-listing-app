@@ -240,7 +240,7 @@ public class Common {
         }
     }
 
-    public static boolean isValidPasswordEditText(EditText editText) {
+    public static boolean isValid6CharsMinEditText(EditText editText) {
         editText.setError(null);
         if (editText.getText().toString().isEmpty()) {
             editText.setError("This field is required");

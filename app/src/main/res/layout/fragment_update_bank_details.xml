@@ -40,34 +40,22 @@
                 android:id="@+id/accountName"
                 style="@style/edit_text_style"
                 android:layout_marginBottom="2dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/transparent"
+                android:layout_marginTop="15dp"
                 android:gravity="left|center"
                 android:hint="Account Name"
                 android:textColor="@color/grey"
                 android:textColorHint="@color/grey" />
 
-            <View
-                style="@style/white_line_view_style"
-                android:layout_marginBottom="2dp"
-                android:background="@color/light_grey" />
-
             <EditText
                 android:id="@+id/accountNumber"
                 style="@style/edit_text_style"
                 android:layout_marginBottom="2dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/transparent"
+                android:layout_marginTop="15dp"
                 android:gravity="left|center"
                 android:hint="Account Number"
                 android:inputType="number"
                 android:textColor="@color/grey"
                 android:textColorHint="@color/grey" />
-
-            <View
-                style="@style/white_line_view_style"
-                android:layout_marginBottom="2dp"
-                android:background="@color/light_grey" />
 
             <Spinner
                 android:id="@+id/accountType"

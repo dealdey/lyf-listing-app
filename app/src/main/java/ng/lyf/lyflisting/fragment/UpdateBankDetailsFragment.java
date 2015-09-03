@@ -14,10 +14,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import ng.lyf.lyflisting.baseActivities.MainActivity;
 import ng.lyf.lyflisting.R;
-import ng.lyf.lyflisting.utils.others.Common;
+import ng.lyf.lyflisting.baseActivities.MainActivity;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
+import ng.lyf.lyflisting.utils.others.Common;
 
 /**
  * A placeholder ng.lyf.lyflisting.fragment containing a simple view.
@@ -59,9 +59,9 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if (Common.isValidEditText(bankNameSpinner) & Common.isValidEditText(accountNameEditText)
-//                        & Common.isValidEditText(accountNumberEditText) & Common.isValidEditText(accountTypeSpinner)) {
-//                }
+                if (Common.isValidEditText(accountNameEditText)
+                        & Common.isValidAccountNumberEditText(accountNumberEditText)) {
+                }
                 save();
             }
         });
@@ -77,8 +77,10 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        ((TextView) parent.getChildAt(0)).setTextColor(Color.GRAY);
-        ((TextView) parent.getChildAt(0)).setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        TextView textView = (TextView) parent.getChildAt(0);
+        textView.setTextColor(Color.GRAY);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        textView.setPadding(5, 0, 0, 0);
     }
 
     @Override
