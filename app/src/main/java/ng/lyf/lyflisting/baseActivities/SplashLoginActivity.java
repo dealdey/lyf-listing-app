@@ -242,7 +242,9 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     }
 
     private void forgotPassword() {
-
+        Intent intent = new Intent(SplashLoginActivity.this, MainActivity.class);
+        intent.putExtra("fragmentName", "forgotPassword");
+        startActivity(intent);
     }
 
     @Override
