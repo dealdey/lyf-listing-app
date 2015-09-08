@@ -14,7 +14,7 @@ public class RippleEffect {
         MaterialRippleLayout materialRippleLayout = MaterialRippleLayout.on(view)
                 .rippleColor(Color.BLACK).rippleOverlay(true).rippleAlpha(0.3f)
                 .rippleHover(true).rippleRoundedCorners(2).rippleDuration(350)
-                .rippleFadeDuration(70).rippleDelayClick(true).rippleDiameterDp(10)
+                .rippleFadeDuration(70).rippleDelayClick(false).rippleDiameterDp(10)
                 .create();
         return materialRippleLayout;
     }

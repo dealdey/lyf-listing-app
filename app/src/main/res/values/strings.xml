@@ -6,26 +6,18 @@
     <string name="google_tag_manager_container_id_debug">GTM-NGVKD4</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
 
     <string name="no_activity_to_share">No application available to share the experience</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string-array name="bank_name">
-        <item>GTBank</item>
-        <item>First Bank</item>
-        <item>Diamond Bank</item>
-        <item>Skype</item>
-        <item>Stanbic IBTC</item>
-    </string-array>
     <string name="bank_prompt">Bank Name</string>
-
-    <string-array name="account_type">
-        <item>Savings</item>
-        <item>Current</item>
-    </string-array>
     <string name="account_prompt">Account Type</string>
 
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
 
+    <string name="money">My Money</string>
+    <string name="settings">Settings</string>
 
 </resources>

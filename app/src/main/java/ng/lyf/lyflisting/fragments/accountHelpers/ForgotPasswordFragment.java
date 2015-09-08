@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.fragment;
+package ng.lyf.lyflisting.fragments.accountHelpers;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import ng.lyf.lyflisting.R;
-import ng.lyf.lyflisting.baseActivities.MainActivity;
+import ng.lyf.lyflisting.baseActivities.AccountHelperActivity;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 import ng.lyf.lyflisting.utils.others.Common;
 
@@ -31,7 +31,7 @@ public class ForgotPasswordFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_forgot_password, container, false);
+        View view = inflater.inflate(R.layout.fragment_account_helper_forgot_password, container, false);
 
         getActivity().setTitle("Forgot Password?");
 
@@ -54,7 +54,7 @@ public class ForgotPasswordFragment extends Fragment {
         showResetPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).showFragment(new ResetPasswordFragment());
+                ((AccountHelperActivity) getActivity()).showFragment(new ResetPasswordFragment());
             }
         });
 
@@ -63,6 +63,6 @@ public class ForgotPasswordFragment extends Fragment {
     }
 
     private void sendCode() {
-        ((MainActivity) getActivity()).showFragment(new ResetPasswordFragment());
+        ((AccountHelperActivity) getActivity()).showFragment(new ResetPasswordFragment());
     }
 }

@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:padding="5dp">
 
-
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -41,6 +40,7 @@
                 style="@style/edit_text_style"
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="15dp"
+                android:backgroundTint="@color/light_grey"
                 android:gravity="left|center"
                 android:hint="Account Name"
                 android:textColor="@color/grey"
@@ -51,6 +51,7 @@
                 style="@style/edit_text_style"
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="15dp"
+                android:backgroundTint="@color/light_grey"
                 android:gravity="left|center"
                 android:hint="Account Number"
                 android:inputType="number"

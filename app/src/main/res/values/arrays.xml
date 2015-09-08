@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nav_drawer_labels">
+        <item>Businesses</item>
+        <item>Add A Business</item>
+        <item>Profile</item>
+        <item>My Money</item>
+        <item>Settings</item>
+        <item>Help</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="account_type">
+        <item>Savings</item>
+        <item>Current</item>
+    </string-array>
+
+    <string-array name="bank_name">
+        <item>GTBank</item>
+        <item>First Bank</item>
+        <item>Diamond Bank</item>
+        <item>Skype</item>
+        <item>Stanbic IBTC</item>
+    </string-array>
+
+
+</resources>

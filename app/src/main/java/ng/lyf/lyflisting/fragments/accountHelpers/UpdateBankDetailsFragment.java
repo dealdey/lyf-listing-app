@@ -1,5 +1,6 @@
-package ng.lyf.lyflisting.fragment;
+package ng.lyf.lyflisting.fragments.accountHelpers;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -24,17 +24,11 @@ import ng.lyf.lyflisting.utils.others.Common;
  */
 public class UpdateBankDetailsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
-    private EditText passwordResetEditText;
-    private EditText passwordEditText;
-    private Button showPasswordButton;
     private Button saveButton;
-    private Button resendResetCodeButton;
     private Spinner bankNameSpinner;
     private EditText accountNameEditText;
     private EditText accountNumberEditText;
     private Spinner accountTypeSpinner;
-    private ArrayAdapter accountTypeArrayAdapter;
-    private ArrayAdapter bankArrayAdapter;
 
     public UpdateBankDetailsFragment() {
     }
@@ -42,7 +36,7 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_update_bank_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_account_helper_update_bank_details, container, false);
 
         getActivity().setTitle("Update Bank Account Details");
 
@@ -72,7 +66,8 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
     }
 
     private void save() {
-        ((MainActivity) getActivity()).showFragment(new ForgotPasswordFragment());
+        startActivity(new Intent(getActivity(), MainActivity.class));
+        getActivity().finish();
     }
 
     @Override

@@ -37,7 +37,7 @@
             android:drawablePadding="10dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:paddingRight="40dp" />
+            android:paddingRight="46dp" />
 
         <Button
             android:id="@+id/showSignInPassword"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:paddingRight="5dp"
+            android:padding="10dp"
             android:text="SHOW"
             android:textSize="10sp"
             android:textStyle="bold" />
@@ -59,6 +59,7 @@
         android:layout_marginTop="10dp"
         android:layout_weight="0.2"
         android:gravity="right|center"
+        android:padding="10dp"
         android:text="forgot password?" />
 
     <LinearLayout
@@ -87,7 +88,7 @@
         android:id="@+id/showSignUpForm"
         style="@style/plain_button_style"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="0.2"
         android:gravity="center"
         android:text="New here? Sign Up!" />

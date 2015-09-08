@@ -115,8 +115,8 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
                 if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValid6CharsMinEditText(signInPasswordEditText)) {
                     signInButton.setVisibility(View.GONE);
                     signInProgressBar.setVisibility(View.VISIBLE);
-                    login(signInMobileEditText.getText().toString(), signInPasswordEditText.getText().toString());
                 }
+                login(signInMobileEditText.getText().toString(), signInPasswordEditText.getText().toString());
             }
         });
 
@@ -193,7 +193,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
                             if (true) {
                                 revealSignInForm();
                             } else {
-//                                startActivity(new Intent(SplashLogin.this, MainActivity.class));
+//                                startActivity(new Intent(SplashLogin.this, AccountHelperActivity.class));
                                 finish();
                             }
                         }
@@ -232,21 +232,21 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     }
 
     public void login(final String email, final String password) {
-        Intent intent = new Intent(SplashLoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivity.class);
         intent.putExtra("fragmentName", "verifyPhone");
         startActivity(intent);
         finish();
     }
 
     private void signUp() {
-        Intent intent = new Intent(SplashLoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivity.class);
         intent.putExtra("fragmentName", "verifyPhone");
         startActivity(intent);
         finish();
     }
 
     private void forgotPassword() {
-        Intent intent = new Intent(SplashLoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivity.class);
         intent.putExtra("fragmentName", "forgotPassword");
         startActivity(intent);
     }
