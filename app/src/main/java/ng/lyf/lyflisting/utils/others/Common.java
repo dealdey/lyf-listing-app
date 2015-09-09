@@ -230,74 +230,83 @@ public class Common {
     }
 
     public static boolean isValidEditText(EditText editText) {
-        editText.setError(null);
-        if (editText.getText().toString().isEmpty()) {
-            editText.setError("This field is required");
-            editText.requestFocus();
-            return false;
-        } else {
-            return true;
+        if (editText != null) {
+            editText.setError(null);
+            if (editText.getText().toString().isEmpty()) {
+                editText.setError("This field is required");
+                editText.requestFocus();
+            } else {
+                return true;
+            }
         }
+        return false;
     }
 
     public static boolean isValid6CharsMinEditText(EditText editText) {
-        editText.setError(null);
-        if (editText.getText().toString().isEmpty()) {
-            editText.setError("This field is required");
-            editText.requestFocus();
-            return false;
-        } else if (editText.getText().toString().length() < 6) {
-            editText.setError("Must be more than 6 characters");
-            editText.requestFocus();
-            return false;
-        } else {
-            return true;
+        if (editText != null) {
+            String text = editText.getText().toString();
+            editText.setError(null);
+            if (text.isEmpty()) {
+                editText.setError("This field is required");
+                editText.requestFocus();
+            } else if (text.length() < 6) {
+                editText.setError("Must be more than 6 characters");
+                editText.requestFocus();
+            } else {
+                return true;
+            }
         }
+        return false;
     }
 
     public static boolean isValidAccountNumberEditText(EditText editText) {
-        editText.setError(null);
-        if (editText.getText().toString().isEmpty()) {
-            editText.setError("This field is required");
-            editText.requestFocus();
-            return false;
-        } else if (editText.getText().toString().length() == 10) {
-            editText.setError("Must be 10 characters");
-            editText.requestFocus();
-            return false;
-        } else {
-            return true;
+        if (editText != null) {
+            String text = editText.getText().toString();
+            editText.setError(null);
+            if (text.isEmpty()) {
+                editText.setError("This field is required");
+                editText.requestFocus();
+            } else if (text.length() == 10) {
+                editText.setError("Must be 10 characters");
+                editText.requestFocus();
+            } else {
+                return true;
+            }
         }
+        return false;
     }
 
     public static boolean isValidEmailEditText(EditText editText) {
-        editText.setError(null);
-        if (editText.getText().toString().isEmpty()) {
-            editText.setError("This field is required");
-            editText.requestFocus();
-            return false;
-        } else if (!validateStringWithRegex(editText.getText().toString(), EMAIL_REGEX)) {
-            editText.setError("Must be a valid email address");
-            editText.requestFocus();
-            return false;
-        } else {
-            return true;
+        if (editText != null) {
+            String text = editText.getText().toString();
+            editText.setError(null);
+            if (text.isEmpty()) {
+                editText.setError("This field is required");
+                editText.requestFocus();
+            } else if (!validateStringWithRegex(text, EMAIL_REGEX)) {
+                editText.setError("Must be a valid email address");
+                editText.requestFocus();
+            } else {
+                return true;
+            }
         }
+        return false;
     }
 
     public static boolean isValidPhoneEditText(EditText editText) {
-        editText.setError(null);
-        if (editText.getText().toString().isEmpty()) {
-            editText.setError("This field is required");
-            editText.requestFocus();
-            return false;
-        } else if (!validateStringWithRegex(editText.getText().toString(), MOBILE_REGEX)) {
-            editText.setError("Must be a valid phone number");
-            editText.requestFocus();
-            return false;
-        } else {
-            return true;
+        if (editText != null) {
+            editText.setError(null);
+            if (editText.getText().toString().isEmpty()) {
+                editText.setError("This field is required");
+                editText.requestFocus();
+            } else if (!validateStringWithRegex(editText.getText().toString(), MOBILE_REGEX)) {
+                editText.setError("Must be a valid phone number");
+                editText.requestFocus();
+            } else {
+                return true;
+            }
         }
+        return false;
     }
 
     private static boolean validateStringWithRegex(String string, String regex) {
@@ -314,21 +323,23 @@ public class Common {
     }
 
     public static void togglePasswordInputVisibility(EditText passwordEditText, Button showPasswordButton) {
-        int signInPasswordTextStart;
-        int signInPasswordTextEnd;
+        if(passwordEditText!=null && showPasswordButton!=null) {
+            int signInPasswordTextStart;
+            int signInPasswordTextEnd;
 
-        if (showPasswordButton.getText().toString().equalsIgnoreCase("show")) {
-            signInPasswordTextStart = passwordEditText.getSelectionStart();
-            signInPasswordTextEnd = passwordEditText.getSelectionEnd();
-            passwordEditText.setTransformationMethod(null);
-            passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
-            showPasswordButton.setText("HIDE");
-        } else {
-            signInPasswordTextStart = passwordEditText.getSelectionStart();
-            signInPasswordTextEnd = passwordEditText.getSelectionEnd();
-            passwordEditText.setTransformationMethod(new PasswordTransformationMethod());
-            passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
-            showPasswordButton.setText("SHOW");
+            if (showPasswordButton.getText().toString().equalsIgnoreCase("show")) {
+                signInPasswordTextStart = passwordEditText.getSelectionStart();
+                signInPasswordTextEnd = passwordEditText.getSelectionEnd();
+                passwordEditText.setTransformationMethod(null);
+                passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
+                showPasswordButton.setText("HIDE");
+            } else {
+                signInPasswordTextStart = passwordEditText.getSelectionStart();
+                signInPasswordTextEnd = passwordEditText.getSelectionEnd();
+                passwordEditText.setTransformationMethod(new PasswordTransformationMethod());
+                passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
+                showPasswordButton.setText("SHOW");
+            }
         }
     }
 }
