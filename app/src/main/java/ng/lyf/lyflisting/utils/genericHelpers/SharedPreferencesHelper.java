@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.utils.others;
+package ng.lyf.lyflisting.utils.genericHelpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;

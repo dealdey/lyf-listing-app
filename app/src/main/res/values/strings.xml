@@ -19,5 +19,12 @@
 
     <string name="money">My Money</string>
     <string name="settings">Settings</string>
+    <string name="show">SHOW</string>
+    <string name="hide">HIDE</string>
+    <string name="invalid_phone">Must be a valid phone number</string>
+    <string name="required_field">This field is required</string>
+    <string name="invalid_email">Must be a valid email address</string>
+    <string name="invalid_account_number">Must be 10 characters</string>
+    <string name="input_too_short">Must be more than 6 characters</string>
 
 </resources>

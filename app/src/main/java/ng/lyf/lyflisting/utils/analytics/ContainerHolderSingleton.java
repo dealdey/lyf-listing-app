@@ -12,14 +12,13 @@ public class ContainerHolderSingleton {
     /**
      * Utility class; don't instantiate.
      */
-    private ContainerHolderSingleton() {
-    }
+    private ContainerHolderSingleton() { }
 
     public static ContainerHolder getContainerHolder() {
         return containerHolder;
     }
 
-    public static void setContainerHolder(ContainerHolder c) {
-        containerHolder = c;
+    public static void setContainerHolder(ContainerHolder containerHolder) {
+        ContainerHolderSingleton.containerHolder = containerHolder;
     }
 }
