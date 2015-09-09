@@ -31,9 +31,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/include_signin_form" />
-
-            <include layout="@layout/include_signup_form" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
