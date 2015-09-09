@@ -25,31 +25,20 @@ import ng.lyf.lyflisting.utils.analytics.GoogleTagManagerHelper;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 import ng.lyf.lyflisting.utils.others.Common;
 
-public class SplashLoginActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class SplashLoginActivity extends AppCompatActivity{
 
 
     private static ScrollView enterForm;
     private EditText signInMobileEditText;
     private EditText signInPasswordEditText;
-    private EditText signUpMobileEditText;
-    private EditText signUpPasswordEditText;
-    private EditText emailEditText;
-    private EditText fullNameEditText;
 
     private Button signInButton;
-    private Button signUpButton;
     private Button showSignInPasswordButton;
-    private Button showSignUpPasswordButton;
     private Button showSignUpFormButton;
-    private Button showSignInFormButton;
     private Button forgetPasswordButton;
     private View signInProgressBar;
-    private View signUpProgressBar;
-    private View signUpForm;
     private View signInForm;
     private boolean isLoading;
-    private ArrayAdapter bankArrayAdapter;
-    private ArrayAdapter accountTypeArrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +46,6 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.activity_splash_login);
 
         signInProgressBar = findViewById(R.id.signInProgressBar);
-        signUpProgressBar = findViewById(R.id.signUpProgressBar);
         enterForm = (ScrollView) findViewById(R.id.enterForm);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -91,8 +79,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
             public void onClick(View v) {
                 if (!isLoading) {
                     signInForm.setVisibility(View.GONE);
-                    signUpForm.setVisibility(View.VISIBLE);
-                    enterForm.computeScroll();
+                    //signUpForm.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -120,55 +107,10 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
             }
         });
 
-        //signUp form
-        signUpForm = findViewById(R.id.signUpForm);
-        fullNameEditText = (EditText) findViewById(R.id.fullName);
-        emailEditText = (EditText) findViewById(R.id.email);
-
-        signUpMobileEditText = (EditText) findViewById(R.id.signUpMobile);
-        signUpPasswordEditText = (EditText) findViewById(R.id.signUpPassword);
-        //A password inputfield font changes by default to monospace, hence the need to change it.
-        signUpPasswordEditText.setTypeface(Typeface.create("sans", Typeface.NORMAL));
-
-        signUpButton = (Button) findViewById(R.id.signUpButton);
-        RippleEffect.addRippleToView(signUpButton);
-
-        showSignUpPasswordButton = (Button) findViewById(R.id.showSignUpPassword);
-        RippleEffect.addRippleToView(showSignUpPasswordButton);
-        showSignUpPasswordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Common.togglePasswordInputVisibility(signUpPasswordEditText, showSignUpPasswordButton);
-            }
-        });
-
-        showSignInFormButton = (Button) findViewById(R.id.showSignInForm);
-        showSignInFormButton.setText(Html.fromHtml("Already a member? <font color='#E94B0A'>Sign In!</font>"));
-        showSignInFormButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isLoading) {
-                    signUpForm.setVisibility(View.GONE);
-                    signInForm.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        signUpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (Common.isValidEditText(fullNameEditText) & Common.isValidEmailEditText(emailEditText)
-                        & Common.isValidPhoneEditText(signUpMobileEditText)
-                        & Common.isValid6CharsMinEditText(signUpPasswordEditText)) {
-                    signUpButton.setVisibility(View.GONE);
-                    signUpProgressBar.setVisibility(View.VISIBLE);
-                    signUp();
-                }
-                signUp();
-            }
-        });
-
         backgroundInitializer();
+    }
+
+    private void forgotPassword() {
     }
 
     public void backgroundInitializer() {
@@ -232,32 +174,7 @@ public class SplashLoginActivity extends AppCompatActivity implements AdapterVie
     }
 
     public void login(final String email, final String password) {
-        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivity.class);
-        intent.putExtra("fragmentName", "verifyPhone");
-        startActivity(intent);
-        finish();
+
     }
 
-    private void signUp() {
-        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivity.class);
-        intent.putExtra("fragmentName", "verifyPhone");
-        startActivity(intent);
-        finish();
-    }
-
-    private void forgotPassword() {
-        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivity.class);
-        intent.putExtra("fragmentName", "forgotPassword");
-        startActivity(intent);
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
-        ((TextView) parent.getChildAt(0)).setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-    }
 }
