@@ -66,7 +66,7 @@ public class GoogleTagManagerHelper {
     }
 
     private static class ContainerLoadedCallback implements ContainerHolder.ContainerAvailableListener {
-        @Overrideit 
+        @Override
         public void onContainerAvailable(ContainerHolder containerHolder, String containerVersion) {
             // We load each container when it becomes available.
             Container container = containerHolder.getContainer();
