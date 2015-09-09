@@ -32,6 +32,7 @@ import ng.lyf.lyflisting.R;
 public class Common {
     public static final String EMAIL_REGEX = "^[a-zA-Z][\\w\\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]\\.[a-zA-Z][a-zA-Z\\.]*[a-zA-Z]$";
     public static final String MOBILE_REGEX = "^0(7|8|9)[0-9]{9}$";
+    private static Context context = LyfListingApplication.getContext();
 
     /*
 * Useful for checking if the device is tablet or not
@@ -229,11 +230,11 @@ public class Common {
         textView.setText(Html.fromHtml("<b><u>" + text + "</u></b>"));
     }
 
-    public static boolean isValidEditText(EditText editText) {
+    public static boolean isEditTextNotEmpty(EditText editText) {
         if (editText != null) {
             editText.setError(null);
             if (editText.getText().toString().isEmpty()) {
-                editText.setError("This field is required");
+                editText.setError(context.getString(R.string.required_field));
                 editText.requestFocus();
             } else {
                 return true;
@@ -247,10 +248,10 @@ public class Common {
             String text = editText.getText().toString();
             editText.setError(null);
             if (text.isEmpty()) {
-                editText.setError("This field is required");
+                editText.setError(context.getString(R.string.required_field));
                 editText.requestFocus();
             } else if (text.length() < 6) {
-                editText.setError("Must be more than 6 characters");
+                editText.setError(context.getString(R.string.input_too_short));
                 editText.requestFocus();
             } else {
                 return true;
@@ -264,10 +265,10 @@ public class Common {
             String text = editText.getText().toString();
             editText.setError(null);
             if (text.isEmpty()) {
-                editText.setError("This field is required");
+                editText.setError(context.getString(R.string.required_field));
                 editText.requestFocus();
             } else if (text.length() == 10) {
-                editText.setError("Must be 10 characters");
+                editText.setError(context.getString(R.string.invalid_account_number));
                 editText.requestFocus();
             } else {
                 return true;
@@ -281,10 +282,10 @@ public class Common {
             String text = editText.getText().toString();
             editText.setError(null);
             if (text.isEmpty()) {
-                editText.setError("This field is required");
+                editText.setError(context.getString(R.string.required_field));
                 editText.requestFocus();
             } else if (!validateStringWithRegex(text, EMAIL_REGEX)) {
-                editText.setError("Must be a valid email address");
+                editText.setError(context.getString(R.string.invalid_email));
                 editText.requestFocus();
             } else {
                 return true;
@@ -295,12 +296,13 @@ public class Common {
 
     public static boolean isValidPhoneEditText(EditText editText) {
         if (editText != null) {
+            String text = editText.getText().toString();
             editText.setError(null);
-            if (editText.getText().toString().isEmpty()) {
-                editText.setError("This field is required");
+            if (text.isEmpty()) {
+                editText.setError(context.getString(R.string.required_field));
                 editText.requestFocus();
-            } else if (!validateStringWithRegex(editText.getText().toString(), MOBILE_REGEX)) {
-                editText.setError("Must be a valid phone number");
+            } else if (!validateStringWithRegex(text, MOBILE_REGEX)) {
+                editText.setError(context.getResources().getString(R.string.invalid_phone));
                 editText.requestFocus();
             } else {
                 return true;
@@ -324,21 +326,23 @@ public class Common {
 
     public static void togglePasswordInputVisibility(EditText passwordEditText, Button showPasswordButton) {
         if(passwordEditText!=null && showPasswordButton!=null) {
+            String show = context.getString(R.string.show);
+            String hide = context.getString(R.string.hide);
             int signInPasswordTextStart;
             int signInPasswordTextEnd;
 
-            if (showPasswordButton.getText().toString().equalsIgnoreCase("show")) {
+            if (showPasswordButton.getText().toString().equalsIgnoreCase(show)) {
                 signInPasswordTextStart = passwordEditText.getSelectionStart();
                 signInPasswordTextEnd = passwordEditText.getSelectionEnd();
                 passwordEditText.setTransformationMethod(null);
                 passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
-                showPasswordButton.setText("HIDE");
+                showPasswordButton.setText(hide);
             } else {
                 signInPasswordTextStart = passwordEditText.getSelectionStart();
                 signInPasswordTextEnd = passwordEditText.getSelectionEnd();
                 passwordEditText.setTransformationMethod(new PasswordTransformationMethod());
                 passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
-                showPasswordButton.setText("SHOW");
+                showPasswordButton.setText(show);
             }
         }
     }
