@@ -38,13 +38,16 @@ public class SplashLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_login);
 
-        //Splash Screen UI
-        enterForm   = (ScrollView) findViewById(R.id.enterForm);
-        logoArea    = (ImageView) findViewById(R.id.logoImage);
-
+        initLandingPageUI();
         initSignInUI();
+        initSignInListeners();
 
         backgroundInitializer();
+    }
+
+    private void initLandingPageUI(){
+        enterForm   = (ScrollView) findViewById(R.id.enterForm);
+        logoArea    = (ImageView) findViewById(R.id.logoImage);
     }
 
     private void initSignInUI(){
@@ -58,16 +61,14 @@ public class SplashLoginActivity extends AppCompatActivity {
         signInProgressBar           = findViewById(R.id.signInProgressBar);
 
         //A password inputfield font changes by default to monospace, hence changing it to sans.
-        signInPasswordEditText.setTypeface(Typeface.create("sans", Typeface.NORMAL));
+        signInPasswordEditText.setTypeface(Typeface.create(getResources().getString(R.string.font_family), Typeface.NORMAL));
 
-        showSignUpFormButton.setText(Html.fromHtml("New here? <font color='#E94B0A'>Sign Up!</font>"));
+        showSignUpFormButton.setText(Html.fromHtml(getResources().getString(R.string.sign_up_button_text)));
 
         RippleEffect.addRippleToView(signInButton);
         RippleEffect.addRippleToView(showSignInPasswordButton);
         RippleEffect.addRippleToView(showSignUpFormButton);
         RippleEffect.addRippleToView(forgetPasswordButton);
-
-        initSignInListeners();
     }
 
     private void initSignInListeners(){
@@ -83,7 +84,6 @@ public class SplashLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isLoading) {
                     signInForm.setVisibility(View.GONE);
-                    //signUpForm.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -98,15 +98,13 @@ public class SplashLoginActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Common.isValidPhoneEditText(signInMobileEditText) &
-                        Common.isValid6CharsMinEditText(signInPasswordEditText)) {
+                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValid6CharsMinEditText(signInPasswordEditText)) {
                     isLoading = true;
                     signInButton.setVisibility(View.GONE);
                     signInProgressBar.setVisibility(View.VISIBLE);
                 }
 
-                login( Common.getStringFromEditText(signInMobileEditText),
-                        Common.getStringFromEditText(signInPasswordEditText));
+                login( Common.getStringFromEditText(signInMobileEditText), Common.getStringFromEditText(signInPasswordEditText));
             }
         });
     }

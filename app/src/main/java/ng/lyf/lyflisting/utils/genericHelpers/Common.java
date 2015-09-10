@@ -328,20 +328,17 @@ public class Common {
         if(passwordEditText!=null && showPasswordButton!=null) {
             String show = context.getString(R.string.show);
             String hide = context.getString(R.string.hide);
-            int signInPasswordTextStart;
-            int signInPasswordTextEnd;
+            int cursorPosition;
 
             if (showPasswordButton.getText().toString().equalsIgnoreCase(show)) {
-                signInPasswordTextStart = passwordEditText.getSelectionStart();
-                signInPasswordTextEnd = passwordEditText.getSelectionEnd();
+                cursorPosition = passwordEditText.getSelectionStart();
                 passwordEditText.setTransformationMethod(null);
-                passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
+                passwordEditText.setSelection(cursorPosition);
                 showPasswordButton.setText(hide);
             } else {
-                signInPasswordTextStart = passwordEditText.getSelectionStart();
-                signInPasswordTextEnd = passwordEditText.getSelectionEnd();
+                cursorPosition = passwordEditText.getSelectionStart();
                 passwordEditText.setTransformationMethod(new PasswordTransformationMethod());
-                passwordEditText.setSelection(signInPasswordTextStart, signInPasswordTextEnd);
+                passwordEditText.setSelection(cursorPosition);
                 showPasswordButton.setText(show);
             }
         }
