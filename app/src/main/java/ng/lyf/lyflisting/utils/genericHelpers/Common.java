@@ -346,4 +346,10 @@ public class Common {
             }
         }
     }
+
+    public static String getStringFromEditText(EditText editText){
+        if (editText != null) { return editText.getText().toString().trim(); }
+        return "";
+    }
+
 }
