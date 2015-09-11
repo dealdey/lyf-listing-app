@@ -9,8 +9,8 @@
     <EditText
         android:id="@+id/fullName"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/_5dp"
-        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
+        android:layout_marginTop="@dimen/edittext_margintop_15dp"
         android:gravity="left|center"
         android:hint="@string/full_name"
         android:inputType="phone" />
@@ -18,8 +18,8 @@
     <EditText
         android:id="@+id/email"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/_5dp"
-        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
+        android:layout_marginTop="@dimen/edittext_margintop_15dp"
         android:gravity="left|center"
         android:hint="@string/email"
         android:inputType="textWebEmailAddress" />
@@ -27,8 +27,8 @@
     <EditText
         android:id="@+id/signUpMobile"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/_5dp"
-        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
+        android:layout_marginTop="@dimen/edittext_margintop_15dp"
         android:gravity="left|center"
         android:hint="@string/mobile"
         android:inputType="phone" />
@@ -36,8 +36,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_5dp"
-        android:layout_marginTop="@dimen/_10dp">
+        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
+        android:layout_marginTop="@dimen/edittext_margintop_15dp">
 
         <EditText
             android:id="@+id/signUpPassword"
@@ -55,7 +55,7 @@
             android:layout_gravity="right|center_vertical"
             android:padding="@dimen/_10dp"
             android:text="@string/show"
-            android:textSize="@dimen/_10sp"
+            android:textSize="@dimen/text_small_10sp"
             android:textStyle="bold" />
     </FrameLayout>
 
