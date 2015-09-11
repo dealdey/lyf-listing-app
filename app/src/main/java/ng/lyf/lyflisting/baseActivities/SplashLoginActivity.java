@@ -21,7 +21,7 @@ public class SplashLoginActivity extends AppCompatActivity {
     private ScrollView  enterForm;
     private ImageView   logoArea;
 
-    //SignIn components
+    //SIGN IN COMPONENTS
     private EditText    signInMobileEditText;
     private EditText    signInPasswordEditText;
     private Button      signInButton;
@@ -31,7 +31,7 @@ public class SplashLoginActivity extends AppCompatActivity {
     private View        signInProgressBar;
     private View        signInForm;
 
-    //signUp Components
+    //SIGN UP COMPONENTS
     private EditText    signUpMobileEditText;
     private EditText    signUpPasswordEditText;
     private EditText    emailEditText;
@@ -49,24 +49,17 @@ public class SplashLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_login);
 
-        initLandingPageUI();
-
-        initSignInUI();
-        initSignInListeners();
-
-        initSignUpUI();
-        initSignUpListeners();
-
+        initUI();
+        initListeners();
         backgroundInitializer();
     }
 
-    private void initLandingPageUI(){
-        enterForm   = (ScrollView) findViewById(R.id.enterForm);
-        logoArea    = (ImageView) findViewById(R.id.logoImage);
-        CustomAnimator.animateLayoutChanges(enterForm);
-    }
+    private void initUI(){
+        //LANDING PAGE UI
+        enterForm                   = (ScrollView) findViewById(R.id.enterForm);
+        logoArea                    = (ImageView) findViewById(R.id.logoImage);
 
-    private void initSignInUI(){
+        //SIGN IN UI
         signInForm                  = findViewById(R.id.signInForm);
         signInMobileEditText        = (EditText) findViewById(R.id.mobile);
         signInPasswordEditText      = (EditText) findViewById(R.id.password);
@@ -78,54 +71,13 @@ public class SplashLoginActivity extends AppCompatActivity {
 
         //A password inputfield font changes by default to monospace, hence changing it to sans.
         signInPasswordEditText.setTypeface(Typeface.create(getResources().getString(R.string.sans_font_family), Typeface.NORMAL));
-
         showSignUpFormButton.setText(Html.fromHtml(getResources().getString(R.string.sign_up_button_text)));
-
         RippleEffect.addRippleToView(signInButton);
         RippleEffect.addRippleToView(showSignInPasswordButton);
         RippleEffect.addRippleToView(showSignUpFormButton);
         RippleEffect.addRippleToView(forgetPasswordButton);
-    }
 
-    private void initSignInListeners(){
-        showSignInPasswordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Common.togglePasswordInputVisibility(signInPasswordEditText, showSignInPasswordButton);
-            }
-        });
-
-        showSignUpFormButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isLoading) {
-                    signInForm.setVisibility(View.GONE);
-                    signUpForm.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        forgetPasswordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { forgotPassword(); }
-        });
-
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValid6CharsMinEditText(signInPasswordEditText)) {
-                    isLoading = true;
-                    signInButton.setVisibility(View.GONE);
-                    signInProgressBar.setVisibility(View.VISIBLE);
-                }
-
-                login( Common.getStringFromEditText(signInMobileEditText), Common.getStringFromEditText(signInPasswordEditText));
-            }
-        });
-    }
-
-
-    private void initSignUpUI(){
+        //SIGN UP UI
         signUpForm                  = findViewById(R.id.signUpForm);
         fullNameEditText            = (EditText) findViewById(R.id.fullName);
         emailEditText               = (EditText) findViewById(R.id.email);
@@ -138,19 +90,47 @@ public class SplashLoginActivity extends AppCompatActivity {
 
         //A password inputfield font changes by default to monospace, hence the need to change it.
         signUpPasswordEditText.setTypeface(Typeface.create(getResources().getString(R.string.sans_font_family), Typeface.NORMAL));
-
         showSignInFormButton.setText(Html.fromHtml(getResources().getString(R.string.sign_in_button_text)));
-
         RippleEffect.addRippleToView(signUpButton);
         RippleEffect.addRippleToView(showSignUpPasswordButton);
     }
 
-    private void initSignUpListeners(){
+    private void initListeners(){
+        //SIGN IN LISTENERS
+        showSignInPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { Common.togglePasswordInputVisibility(signInPasswordEditText, showSignInPasswordButton); }
+        });
+        showSignUpFormButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isLoading) {
+                    signInForm.setVisibility(View.GONE);
+                    signUpForm.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        forgetPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { forgotPassword(); }
+        });
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValid6CharsMinEditText(signInPasswordEditText)) {
+                    isLoading = true;
+                    signInButton.setVisibility(View.GONE);
+                    signInProgressBar.setVisibility(View.VISIBLE);
+                }
+                login(Common.getStringFromEditText(signInMobileEditText), Common.getStringFromEditText(signInPasswordEditText));
+            }
+        });
+
+        //SIGN UP LISTENERS
         showSignUpPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { Common.togglePasswordInputVisibility(signUpPasswordEditText, showSignUpPasswordButton); }
         });
-
         showSignInFormButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,7 +140,6 @@ public class SplashLoginActivity extends AppCompatActivity {
                 }
             }
         });
-
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -192,9 +171,7 @@ public class SplashLoginActivity extends AppCompatActivity {
                 finally {
                     runOnUiThread(new Runnable() {
                         @Override
-                        public void run() {
-                            CustomAnimator.slideUpAndRevailView(logoArea, enterForm);
-                        }
+                        public void run() { CustomAnimator.slideUpAndRevailView(logoArea, enterForm); }
                     });
                 }
             }
