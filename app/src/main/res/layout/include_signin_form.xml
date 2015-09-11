@@ -11,14 +11,14 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
-        android:layout_marginTop="@dimen/edittext_margin_top_15dp">
+        android:layout_marginBottom="@dimen/edittext_margin_bottom"
+        android:layout_marginTop="@dimen/edittext_margin_top">
 
         <EditText
             android:id="@+id/mobile"
             style="@style/edit_text_style"
             android:drawableLeft="@drawable/phone"
-            android:drawablePadding="@dimen/drawable_padding_10dp"
+            android:drawablePadding="@dimen/drawable_padding"
             android:hint="@string/mobile"
             android:inputType="phone" />
 
@@ -27,17 +27,17 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
-        android:layout_marginTop="@dimen/edittext_margin_top_15dp">
+        android:layout_marginBottom="@dimen/edittext_margin_bottom"
+        android:layout_marginTop="@dimen/edittext_margin_top">
 
         <EditText
             android:id="@+id/password"
             style="@style/edit_text_style"
             android:drawableLeft="@drawable/password"
-            android:drawablePadding="@dimen/drawable_padding_10dp"
+            android:drawablePadding="@dimen/drawable_padding"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:paddingRight="@dimen/edittext_padding_right_46dp" />
+            android:paddingRight="@dimen/edittext_padding_right" />
 
         <Button
             android:id="@+id/showSignInPassword"
@@ -45,9 +45,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:padding="@dimen/drawable_padding_10dp"
+            android:padding="@dimen/drawable_padding"
             android:text="@string/show"
-            android:textSize="@dimen/text_small_10sp"
+            android:textSize="@dimen/text_small"
             android:textStyle="bold" />
     </FrameLayout>
 
@@ -56,17 +56,17 @@
         style="@style/plain_button_style"
         android:layout_width="wrap_content"
         android:layout_gravity="right|bottom"
-        android:layout_marginTop="@dimen/drawable_padding_10dp"
+        android:layout_marginTop="@dimen/drawable_padding"
         android:layout_weight="0.2"
         android:gravity="right|center"
-        android:padding="@dimen/drawable_padding_10dp"
+        android:padding="@dimen/drawable_padding"
         android:text="@string/forgot_password" />
 
     <LinearLayout
         android:id="@+id/sectionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/submit_margin_top_20dp"
+        android:layout_marginTop="@dimen/submit_margin_top"
         android:orientation="vertical"
         android:visibility="visible">
 

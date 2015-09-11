@@ -9,8 +9,8 @@
     <EditText
         android:id="@+id/fullName"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
-        android:layout_marginTop="@dimen/edittext_margin_top_15dp"
+        android:layout_marginBottom="@dimen/edittext_margin_bottom"
+        android:layout_marginTop="@dimen/edittext_margin_top"
         android:gravity="left|center"
         android:hint="@string/full_name"
         android:inputType="phone" />
@@ -18,8 +18,8 @@
     <EditText
         android:id="@+id/email"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
-        android:layout_marginTop="@dimen/edittext_margin_top_15dp"
+        android:layout_marginBottom="@dimen/edittext_margin_bottom"
+        android:layout_marginTop="@dimen/edittext_margin_top"
         android:gravity="left|center"
         android:hint="@string/email"
         android:inputType="textWebEmailAddress" />
@@ -27,8 +27,8 @@
     <EditText
         android:id="@+id/signUpMobile"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
-        android:layout_marginTop="@dimen/edittext_margin_top_15dp"
+        android:layout_marginBottom="@dimen/edittext_margin_bottom"
+        android:layout_marginTop="@dimen/edittext_margin_top"
         android:gravity="left|center"
         android:hint="@string/mobile"
         android:inputType="phone" />
@@ -36,8 +36,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/edittext_margin_bottom_5dp"
-        android:layout_marginTop="@dimen/edittext_margin_top_15dp">
+        android:layout_marginBottom="@dimen/edittext_margin_bottom"
+        android:layout_marginTop="@dimen/edittext_margin_top">
 
         <EditText
             android:id="@+id/signUpPassword"
@@ -45,7 +45,7 @@
             android:drawablePadding="10dp"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
-            android:paddingRight="@dimen/edittext_padding_right_46dp" />
+            android:paddingRight="@dimen/edittext_padding_right" />
 
         <Button
             android:id="@+id/showSignUpPassword"
@@ -53,16 +53,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:padding="@dimen/drawable_padding_10dp"
+            android:padding="@dimen/drawable_padding"
             android:text="@string/show"
-            android:textSize="@dimen/text_small_10sp"
+            android:textSize="@dimen/text_small"
             android:textStyle="bold" />
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/submit_margin_top_20dp"
+        android:layout_marginTop="@dimen/submit_margin_top"
         android:orientation="vertical"
         android:visibility="visible">
 
