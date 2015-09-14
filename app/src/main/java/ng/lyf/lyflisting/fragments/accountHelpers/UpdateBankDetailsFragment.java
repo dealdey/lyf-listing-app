@@ -51,7 +51,7 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
         accountNameEditText     = (EditText) view.findViewById(R.id.accountName);
         accountNumberEditText   = (EditText) view.findViewById(R.id.accountNumber);
         saveButton              = (Button) view.findViewById(R.id.saveButton);
-        activity.setTitle(getResources().getString(R.string.update_bank_fragment));
+        activity.setTitle(R.string.update_bank_fragment);
 
         RippleEffect.addRippleToView(saveButton);
         Common.hideKeyboard(activity, view);
