@@ -73,7 +73,7 @@ public class ResetPasswordFragment extends Fragment {
             public void onClick(View v) {
                 if (Common.isEditTextCharLengthSix(passwordResetEditText) & Common.isEditTextCharLengthSix(passwordEditText)) {
                     Common.hideKeyboard(activity, getView());
-                    save();
+                    savePassword();
                 }
             }
         });
@@ -86,7 +86,7 @@ public class ResetPasswordFragment extends Fragment {
         });
     }
 
-    private void save(){
+    private void savePassword(){
         Toast.makeText(getActivity(), "Successfully reset your password", Toast.LENGTH_LONG).show();
         activity.finish();
     }

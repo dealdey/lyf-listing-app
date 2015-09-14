@@ -36,7 +36,7 @@
                 android:layout_marginTop="@dimen/space_small_xxx"
                 android:backgroundTint="@color/light_grey"
                 android:gravity="left|center"
-                android:hint="Account Name"
+                android:hint="@string/account_name"
                 android:textColor="@color/grey"
                 android:textColorHint="@color/grey" />
 
@@ -47,7 +47,7 @@
                 android:layout_marginTop="@dimen/space_small_xxx"
                 android:backgroundTint="@color/light_grey"
                 android:gravity="left|center"
-                android:hint="Account Number"
+                android:hint="@string/account_number"
                 android:inputType="number"
                 android:textColor="@color/grey"
                 android:textColorHint="@color/grey" />
@@ -82,7 +82,7 @@
         <Button
             android:id="@+id/saveButton"
             style="@style/submit_button_style"
-            android:text="SAVE" />
+            android:text="@string/save" />
 
         <ProgressBar
             android:id="@+id/progressBar"
