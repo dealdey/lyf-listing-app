@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/signInForm"
+    android:id="@+id/signUpForm"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="@dimen/space_large"
     android:orientation="vertical"
-    android:visibility="visible">
+    android:visibility="gone">
+
+    <EditText
+        android:id="@+id/fullName"
+        style="@style/edit_text_style"
+        android:layout_marginBottom="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small_xx"
+        android:gravity="left|center"
+        android:hint="@string/full_name"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/edit_text_style"
+        android:layout_marginBottom="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small_xx"
+        android:gravity="left|center"
+        android:hint="@string/email"
+        android:inputType="textWebEmailAddress" />
+
+    <EditText
+        android:id="@+id/signUpMobile"
+        style="@style/edit_text_style"
+        android:layout_marginBottom="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small_xx"
+        android:gravity="left|center"
+        android:hint="@string/mobile"
+        android:inputType="phone" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -15,32 +40,15 @@
         android:layout_marginTop="@dimen/space_small_xx">
 
         <EditText
-            android:id="@+id/mobile"
+            android:id="@+id/signUpPassword"
             style="@style/edit_text_style"
-            android:drawableLeft="@drawable/phone"
-            android:drawablePadding="@dimen/space_small_x"
-            android:hint="@string/mobile"
-            android:inputType="phone" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx">
-
-        <EditText
-            android:id="@+id/password"
-            style="@style/edit_text_style"
-            android:drawableLeft="@drawable/password"
-            android:drawablePadding="@dimen/space_small_x"
-            android:hint="@string/password"
+            android:drawablePadding="10dp"
+            android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:paddingRight="@dimen/space_custom" />
 
         <Button
-            android:id="@+id/showSignInPassword"
+            android:id="@+id/showSignUpPassword"
             style="@style/plain_button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,19 +59,7 @@
             android:textStyle="bold" />
     </FrameLayout>
 
-    <Button
-        android:id="@+id/forgetPassword"
-        style="@style/plain_button_style"
-        android:layout_width="wrap_content"
-        android:layout_gravity="right|bottom"
-        android:layout_marginTop="@dimen/space_small_x"
-        android:layout_weight="0.2"
-        android:gravity="right|center"
-        android:padding="@dimen/space_small_x"
-        android:text="@string/forgot_password" />
-
     <LinearLayout
-        android:id="@+id/sectionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_medium"
@@ -71,12 +67,12 @@
         android:visibility="visible">
 
         <Button
-            android:id="@+id/signInButton"
+            android:id="@+id/signUpButton"
             style="@style/submit_button_style"
-            android:text="@string/signin" />
+            android:text="@string/signup" />
 
         <ProgressBar
-            android:id="@+id/signInProgressBar"
+            android:id="@+id/signUpProgressBar"
             style="?android:attr/progressBarStyleInverse"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -85,11 +81,12 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/showSignUpForm"
+        android:id="@+id/showSignInForm"
         style="@style/plain_button_style"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/space_large"
         android:layout_weight="0.2"
         android:gravity="center"
-        android:text="@string/sign_up_button_text" />
+        android:text="@string/sign_in_button_text" />
 </LinearLayout>
+

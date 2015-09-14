@@ -22,7 +22,7 @@
         android:id="@+id/enterForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/space_x_large"
         android:scrollbars="none"
         android:visibility="gone">
 
@@ -32,6 +32,8 @@
             android:orientation="vertical">
 
             <include layout="@layout/include_signin_form" />
+
+            <include layout="@layout/include_signup_form" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

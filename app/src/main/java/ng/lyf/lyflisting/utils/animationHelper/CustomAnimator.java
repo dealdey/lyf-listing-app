@@ -1,9 +1,13 @@
 package ng.lyf.lyflisting.utils.animationHelper;
 
+import android.animation.LayoutTransition;
 import android.content.Context;
+import android.os.Build;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 
 import ng.lyf.lyflisting.LyfListingApplication;
 import ng.lyf.lyflisting.R;
@@ -37,6 +41,15 @@ public class CustomAnimator {
             });
 
             viewToSlideUp.setAnimation(animation);
+        }
+    }
+
+    public static void animateLayoutChanges(ViewGroup viewGroup){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            LayoutTransition layoutTransition = new LayoutTransition();
+            layoutTransition.enableTransitionType(LayoutTransition.CHANGING);
+            layoutTransition.setDuration(100);
+            viewGroup.setLayoutTransition(layoutTransition);
         }
     }
 }
