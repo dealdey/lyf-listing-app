@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import ng.lyf.lyflisting.R;
+import ng.lyf.lyflisting.activities.AccountHelperActivityWithFragment;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 import ng.lyf.lyflisting.utils.genericHelpers.Common;
 
@@ -22,13 +23,13 @@ import ng.lyf.lyflisting.utils.genericHelpers.Common;
  */
 public class UpdateBankDetailsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
-    private Button      saveButton;
-    private Spinner     bankNameSpinner;
-    private EditText    accountNameEditText;
-    private EditText    accountNumberEditText;
-    private Spinner     accountTypeSpinner;
-    private ProgressBar progressBar;
-    private Activity    activity;
+    private Button                              saveButton;
+    private Spinner                             bankNameSpinner;
+    private EditText                            accountNameEditText;
+    private EditText                            accountNumberEditText;
+    private Spinner                             accountTypeSpinner;
+    private ProgressBar                         progressBar;
+    private AccountHelperActivityWithFragment   activity;
 
     public UpdateBankDetailsFragment() {}
 
@@ -43,7 +44,7 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
     }
 
     public void initUI(View view){
-        activity                = getActivity();
+        activity                = (AccountHelperActivityWithFragment) getActivity();
         progressBar             = (ProgressBar) view.findViewById(R.id.progressBar);
         bankNameSpinner         = (Spinner) view.findViewById(R.id.bankName);
         accountTypeSpinner      = (Spinner) view.findViewById(R.id.accountType);
