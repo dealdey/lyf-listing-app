@@ -24,7 +24,7 @@
     <string name="invalid_phone">Must be a valid phone number</string>
     <string name="required_field">This field is required</string>
     <string name="invalid_email">Must be a valid email address</string>
-    <string name="invalid_account_number">Must be 10 characters</string>
+    <string name="invalid_account_number">Must be 10 characters or more</string>
     <string name="input_too_short">Must be more than 6 characters</string>
     <string name="sign_up_button_text"><![CDATA[New here? <font color=\'#E94B0A\'>Sign Up!</font>]]></string>
     <string name="sans_font_family">sans</string>
@@ -37,5 +37,8 @@
     <string name="email">Email</string>
     <string name="full_name">Full Name</string>
     <string name="sign_in_button_text"><![CDATA[Already a member? <font color=\'#E94B0A\'>Sign In!</font>]]></string>
+    <string name="update_bank_fragment">Update Bank Account Details</string>
+    <string name="verify_phone_fragment">Verify Your Phone Number</string>
+    <string name="resend_verify_button_text"><![CDATA[<font color=\'#E94B0A\'>Click here</font> to resend verification code]]></string>
 
 </resources>

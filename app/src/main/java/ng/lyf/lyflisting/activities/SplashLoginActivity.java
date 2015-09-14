@@ -1,5 +1,6 @@
-package ng.lyf.lyflisting.baseActivities;
+package ng.lyf.lyflisting.activities;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 
+import ng.lyf.lyflisting.Constants;
 import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.utils.analytics.GoogleTagManagerHelper;
 import ng.lyf.lyflisting.utils.animationHelper.CustomAnimator;
@@ -121,8 +123,8 @@ public class SplashLoginActivity extends AppCompatActivity {
                     isLoading = true;
                     signInButton.setVisibility(View.GONE);
                     signInProgressBar.setVisibility(View.VISIBLE);
+                    login(Common.getStringFromEditText(signInMobileEditText), Common.getStringFromEditText(signInPasswordEditText));
                 }
-                login(Common.getStringFromEditText(signInMobileEditText), Common.getStringFromEditText(signInPasswordEditText));
             }
         });
 
@@ -149,8 +151,8 @@ public class SplashLoginActivity extends AppCompatActivity {
                     signUpButton.setVisibility(View.GONE);
                     signUpProgressBar.setVisibility(View.VISIBLE);
                     isLoading = true;
+                    signUp();
                 }
-                signUp();
             }
         });
     }
@@ -171,16 +173,25 @@ public class SplashLoginActivity extends AppCompatActivity {
                 finally {
                     runOnUiThread(new Runnable() {
                         @Override
-                        public void run() { CustomAnimator.slideUpAndRevailView(logoArea, enterForm); }
+                        public void run() {
+                            CustomAnimator.animateLayoutChanges(enterForm);
+                            CustomAnimator.slideUpAndRevailView(logoArea, enterForm); }
                     });
                 }
             }
         }.start();
     }
 
-    private void login(final String email, final String password) {}
+    private void login(final String email, final String password) { showVerifyPhonePage(); }
 
     private void forgotPassword() {}
 
-    private void signUp() {}
+    private void signUp() { showVerifyPhonePage(); }
+
+    private void showVerifyPhonePage(){
+        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivityWithFragment.class);
+        intent.putExtra(Constants.FRAGMENT_TAG, Constants.VERIFY_PHONE);
+        startActivity(intent);
+        finish();
+    }
 }

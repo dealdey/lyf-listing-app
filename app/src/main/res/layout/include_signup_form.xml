@@ -9,8 +9,8 @@
     <EditText
         android:id="@+id/fullName"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx"
+        android:layout_marginBottom="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xxx"
         android:gravity="left|center"
         android:hint="@string/full_name"
         android:inputType="phone" />
@@ -18,8 +18,8 @@
     <EditText
         android:id="@+id/email"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx"
+        android:layout_marginBottom="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xxx"
         android:gravity="left|center"
         android:hint="@string/email"
         android:inputType="textWebEmailAddress" />
@@ -27,8 +27,8 @@
     <EditText
         android:id="@+id/signUpMobile"
         style="@style/edit_text_style"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx"
+        android:layout_marginBottom="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xxx"
         android:gravity="left|center"
         android:hint="@string/mobile"
         android:inputType="phone" />
@@ -36,8 +36,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx">
+        android:layout_marginBottom="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xxx">
 
         <EditText
             android:id="@+id/signUpPassword"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:padding="@dimen/space_small_x"
+            android:padding="@dimen/space_small_xx"
             android:text="@string/show"
             android:textSize="@dimen/text_small"
             android:textStyle="bold" />

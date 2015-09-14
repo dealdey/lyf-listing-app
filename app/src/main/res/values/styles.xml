@@ -61,4 +61,13 @@
         <item name="android:layout_marginBottom">10dp</item>
     </style>
 
+    <style name="card_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="cardCornerRadius">3dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
 </resources>

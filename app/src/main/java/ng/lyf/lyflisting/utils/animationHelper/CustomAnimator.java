@@ -44,7 +44,7 @@ public class CustomAnimator {
         }
     }
 
-    public static void animateLayoutChanges(ViewGroup viewGroup){
+        public static void animateLayoutChanges(ViewGroup viewGroup){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             LayoutTransition layoutTransition = new LayoutTransition();
             layoutTransition.enableTransitionType(LayoutTransition.CHANGING);

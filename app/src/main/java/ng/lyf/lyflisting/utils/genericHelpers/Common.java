@@ -7,12 +7,16 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.method.PasswordTransformationMethod;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -230,6 +234,13 @@ public class Common {
         textView.setText(Html.fromHtml("<b><u>" + text + "</u></b>"));
     }
 
+    public static void replaceContentFragment(AppCompatActivity activity, int contentViewID, Fragment fragment) {
+        FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
+        if (fragmentTransaction != null && contentViewID != 0 && fragment != null) {
+            fragmentTransaction.replace(contentViewID, fragment).addToBackStack(null).commitAllowingStateLoss();
+        }
+    }
+
     public static boolean isEditTextNotEmpty(EditText editText) {
         if (editText != null) {
             editText.setError(null);
@@ -267,7 +278,7 @@ public class Common {
             if (text.isEmpty()) {
                 editText.setError(context.getString(R.string.required_field));
                 editText.requestFocus();
-            } else if (text.length() == 10) {
+            } else if (text.length() < 10) {
                 editText.setError(context.getString(R.string.invalid_account_number));
                 editText.requestFocus();
             } else {
@@ -347,6 +358,12 @@ public class Common {
     public static String getStringFromEditText(EditText editText){
         if (editText != null) { return editText.getText().toString().trim(); }
         return "";
+    }
+
+    public static void changeSelectedSpinnerItemTextUI(TextView textView){
+        textView.setTextColor(Color.GRAY);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        textView.setPadding(5, 0, 0, 0);
     }
 
 }
