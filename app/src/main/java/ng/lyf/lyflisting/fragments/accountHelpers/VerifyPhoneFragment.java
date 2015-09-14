@@ -52,7 +52,7 @@ public class VerifyPhoneFragment extends Fragment {
         verifyButton            = (Button) view.findViewById(R.id.verify);
         resendVerifyCodeButton  = (Button) view.findViewById(R.id.resendVerifyCode);
         resendVerifyCodeButton.setText(Html.fromHtml(getResources().getString(R.string.resend_verify_button_text)));
-        activity.setTitle(getResources().getString(R.string.verify_phone_fragment));
+        activity.setTitle(R.string.verify_phone_fragment);
 
         RippleEffect.addRippleToView(skipButton);
         RippleEffect.addRippleToView(verifyButton);

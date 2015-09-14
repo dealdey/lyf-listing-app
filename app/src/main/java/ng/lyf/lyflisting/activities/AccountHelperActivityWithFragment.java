@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 import ng.lyf.lyflisting.Constants;
 import ng.lyf.lyflisting.R;
+import ng.lyf.lyflisting.fragments.accountHelpers.ForgotPasswordFragment;
 import ng.lyf.lyflisting.fragments.accountHelpers.UpdateBankDetailsFragment;
 import ng.lyf.lyflisting.fragments.accountHelpers.VerifyPhoneFragment;
 import ng.lyf.lyflisting.utils.genericHelpers.Common;
@@ -34,6 +35,9 @@ public class AccountHelperActivityWithFragment extends BaseAppCompatActivityWith
                 break;
             case Constants.UPDATE_BANK:
                 Common.replaceContentFragment(this, contentID, new UpdateBankDetailsFragment());
+                break;
+            case Constants.FORGOT_PASSWORD:
+                Common.replaceContentFragment(this, contentID, new ForgotPasswordFragment());
                 break;
         }
     }

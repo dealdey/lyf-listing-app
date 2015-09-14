@@ -44,4 +44,8 @@ public abstract class BaseAppCompatActivityWithFragment extends AppCompatActivit
         getSupportActionBar().setDisplayHomeAsUpEnabled(backEnabled);
         getSupportActionBar().setDisplayShowHomeEnabled(backEnabled);
     }
+
+    public void setTitle(int stringID){
+        setTitle(getResources().getString(stringID));
+    }
 }

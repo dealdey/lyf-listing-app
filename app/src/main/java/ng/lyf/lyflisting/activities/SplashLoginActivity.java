@@ -185,7 +185,12 @@ public class SplashLoginActivity extends AppCompatActivity {
 
     private void login(final String email, final String password) { showVerifyPhonePage(); }
 
-    private void forgotPassword() {}
+    private void forgotPassword() {
+        Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivityWithFragment.class);
+        intent.putExtra(Constants.FRAGMENT_TAG, Constants.FORGOT_PASSWORD);
+        startActivity(intent);
+        finish();
+    }
 
     private void signUp() { showVerifyPhonePage(); }
 

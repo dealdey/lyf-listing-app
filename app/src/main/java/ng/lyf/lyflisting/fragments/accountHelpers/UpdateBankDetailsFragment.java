@@ -1,6 +1,5 @@
 package ng.lyf.lyflisting.fragments.accountHelpers;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -43,7 +42,7 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
         return view;
     }
 
-    public void initUI(View view){
+    public void initUI(View view) {
         activity                = (AccountHelperActivityWithFragment) getActivity();
         progressBar             = (ProgressBar) view.findViewById(R.id.progressBar);
         bankNameSpinner         = (Spinner) view.findViewById(R.id.bankName);
@@ -57,7 +56,7 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
         Common.hideKeyboard(activity, view);
     }
 
-    public void initListeners(){
+    public void initListeners() {
         bankNameSpinner.setOnItemSelectedListener(this);
         accountTypeSpinner.setOnItemSelectedListener(this);
         saveButton.setOnClickListener(new View.OnClickListener() {
