@@ -22,14 +22,14 @@ import ng.lyf.lyflisting.utils.genericHelpers.Common;
  */
 public class VerifyPhoneFragment extends Fragment {
 
-    private EditText    codeEditText;
-    private Button      verifyButton;
-    private Button      resendVerifyCodeButton;
-    private Button      skipButton;
-    private boolean     isLoading;
-    private ProgressBar resendProgressBar;
-    private ProgressBar verifyProgressBar;
-    private Activity    activity;
+    private EditText                            codeEditText;
+    private Button                              verifyButton;
+    private Button                              resendVerifyCodeButton;
+    private Button                              skipButton;
+    private boolean                             isLoading;
+    private ProgressBar                         resendProgressBar;
+    private ProgressBar                         verifyProgressBar;
+    private AccountHelperActivityWithFragment   activity;
 
     public VerifyPhoneFragment() {
     }
@@ -44,7 +44,7 @@ public class VerifyPhoneFragment extends Fragment {
     }
 
     protected void initUI(View view) {
-        activity                = getActivity();
+        activity                = (AccountHelperActivityWithFragment) getActivity();
         verifyProgressBar       = (ProgressBar) view.findViewById(R.id.verifyProgressBar);
         resendProgressBar       = (ProgressBar) view.findViewById(R.id.resendProgressBar);
         codeEditText            = (EditText) view.findViewById(R.id.code);
@@ -65,7 +65,7 @@ public class VerifyPhoneFragment extends Fragment {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((AccountHelperActivityWithFragment) getActivity()).contentFragmentSwitcher(Constants.UPDATE_BANK);
+                activity.contentFragmentSwitcher(Constants.UPDATE_BANK);
             }
         });
         verifyButton.setOnClickListener(new View.OnClickListener() {
