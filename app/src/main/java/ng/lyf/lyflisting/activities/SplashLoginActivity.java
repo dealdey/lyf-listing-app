@@ -119,7 +119,7 @@ public class SplashLoginActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isValid6CharsMinEditText(signInPasswordEditText)) {
+                if (Common.isValidPhoneEditText(signInMobileEditText) & Common.isEditTextCharLengthSix(signInPasswordEditText)) {
                     isLoading = true;
                     signInButton.setVisibility(View.GONE);
                     signInProgressBar.setVisibility(View.VISIBLE);
@@ -147,7 +147,7 @@ public class SplashLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (Common.isEditTextNotEmpty(fullNameEditText) & Common.isValidEmailEditText(emailEditText)
                         & Common.isValidPhoneEditText(signUpMobileEditText)
-                        & Common.isValid6CharsMinEditText(signUpPasswordEditText)) {
+                        & Common.isEditTextCharLengthSix(signUpPasswordEditText)) {
                     signUpButton.setVisibility(View.GONE);
                     signUpProgressBar.setVisibility(View.VISIBLE);
                     isLoading = true;

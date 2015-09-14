@@ -42,5 +42,7 @@
     <string name="verify_phone_fragment">Verify Your Phone Number</string>
     <string name="resend_verify_button_text"><![CDATA[<font color=\'#E94B0A\'>Click here</font> to resend verification code]]></string>
     <string name="reset_password_button_text"><![CDATA[Already have a reset code? <font color=\'#E94B0A\'>Click here!</font>]]></string>
+    <string name="reset_password_title">Reset Password</string>
+    <string name="resend_reset_code_button_text"><![CDATA[<font color=\'#E94B0A\'>Click here</font> to resend reset code]]></string>
 
 </resources>

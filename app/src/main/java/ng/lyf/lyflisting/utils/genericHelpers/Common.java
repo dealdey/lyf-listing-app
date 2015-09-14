@@ -8,6 +8,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
@@ -254,7 +255,7 @@ public class Common {
         return false;
     }
 
-    public static boolean isValid6CharsMinEditText(EditText editText) {
+    public static boolean isEditTextCharLengthSix(EditText editText) {
         if (editText != null) {
             String text = editText.getText().toString();
             editText.setError(null);
@@ -366,4 +367,8 @@ public class Common {
         textView.setPadding(5, 0, 0, 0);
     }
 
+    //A password inputfield font changes by default to monospace, hence the need to change it.
+    public static void setPasswordEditTextFontToSans(EditText passwordEditText) {
+        passwordEditText.setTypeface(Typeface.create(context.getString(R.string.sans_font_family), Typeface.NORMAL));
+    }
 }

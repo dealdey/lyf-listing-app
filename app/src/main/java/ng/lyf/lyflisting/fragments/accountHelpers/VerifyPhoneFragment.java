@@ -1,6 +1,5 @@
 package ng.lyf.lyflisting.fragments.accountHelpers;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
@@ -71,7 +70,7 @@ public class VerifyPhoneFragment extends Fragment {
         verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Common.isValid6CharsMinEditText(codeEditText)) {
+                if (Common.isEditTextCharLengthSix(codeEditText)) {
                     if (!isLoading) {
                         isLoading = true;
                         verifyPhone();

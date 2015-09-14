@@ -9,4 +9,5 @@ public class Constants {
     public static final int     VERIFY_PHONE = 1;
     public static final int     UPDATE_BANK = 2;
     public static final int     FORGOT_PASSWORD = 3;
+    public static final int     RESET_PASSWORD = 4;
 }

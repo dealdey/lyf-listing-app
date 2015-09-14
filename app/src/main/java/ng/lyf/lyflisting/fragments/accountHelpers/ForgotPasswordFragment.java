@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import ng.lyf.lyflisting.Constants;
 import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.activities.AccountHelperActivityWithFragment;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
@@ -68,9 +69,9 @@ public class ForgotPasswordFragment extends Fragment {
 
         showResetPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {}
+            public void onClick(View v) { activity.contentFragmentSwitcher(Constants.RESET_PASSWORD); }
         });
     }
 
-    private void sendCode() {}
+    private void sendCode() { activity.contentFragmentSwitcher(Constants.RESET_PASSWORD); }
 }
