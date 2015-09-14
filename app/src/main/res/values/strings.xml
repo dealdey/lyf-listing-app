@@ -1,25 +1,37 @@
 <resources>
-    <string name="app_name">LyfListing</string>
+    <string name="app_name">Lyf Listing</string>
+
+    <!-- Google Tag Manager Container ID -->
+    <string name="google_tag_manager_container_id_prod">GTM-PW7GFD</string>
+    <string name="google_tag_manager_container_id_debug">GTM-NGVKD4</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
 
     <string name="no_activity_to_share">No application available to share the experience</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string-array name="bank_name">
-        <item>GTBank</item>
-        <item>First Bank</item>
-        <item>Diamond Bank</item>
-        <item>Skype</item>
-        <item>Stanbic IBTC</item>
-    </string-array>
     <string name="bank_prompt">Bank Name</string>
-
-    <string-array name="account_type">
-        <item>Savings</item>
-        <item>Current</item>
-    </string-array>
     <string name="account_prompt">Account Type</string>
+
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+
+    <string name="money">My Money</string>
+    <string name="settings">Settings</string>
+    <string name="show">SHOW</string>
+    <string name="hide">HIDE</string>
+    <string name="invalid_phone">Must be a valid phone number</string>
+    <string name="required_field">This field is required</string>
+    <string name="invalid_email">Must be a valid email address</string>
+    <string name="invalid_account_number">Must be 10 characters</string>
+    <string name="input_too_short">Must be more than 6 characters</string>
+    <string name="sign_up_button_text"><![CDATA[New here? <font color=\'#E94B0A\'>Sign Up!</font>]]></string>
+    <string name="font_family">sans</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="SHOW">SHOW</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="signin">SIGN IN</string>
 
 </resources>

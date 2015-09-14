@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.utils;
+package ng.lyf.lyflisting.utils.genericHelpers;
 
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;

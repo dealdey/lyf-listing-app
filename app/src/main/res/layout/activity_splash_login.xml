@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
@@ -7,307 +7,32 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:scaleType="centerCrop">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-    <carbon.widget.LinearLayout
+    <ImageView
+        android:id="@+id/logoImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_weight="0.4"
-        android:animateLayoutChanges="true"
-        android:orientation="horizontal"
-        android:visibility="visible">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo"
+        android:visibility="visible" />
 
-        <carbon.widget.ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/logo" />
-    </carbon.widget.LinearLayout>
-
-    <carbon.widget.ScrollView
+    <ScrollView
         android:id="@+id/enterForm"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="0.8"
-        android:animateLayoutChanges="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:scrollbars="none"
         android:visibility="gone">
 
-        <carbon.widget.LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <carbon.widget.LinearLayout
-                android:id="@+id/signInForm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="vertical"
-                android:visibility="visible">
+            <include layout="@layout/include_signin_form" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
 
-                <carbon.widget.LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:orientation="horizontal">
-
-                    <carbon.widget.ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:scaleType="center"
-                        android:src="@drawable/phone" />
-
-                    <carbon.widget.EditText
-                        android:id="@+id/mobile"
-                        style="@style/edit_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="18dp"
-                        android:layout_weight="1"
-                        android:background="@color/transparent"
-                        android:gravity="left|center"
-                        android:hint="Mobile"
-                        android:inputType="phone" />
-                </carbon.widget.LinearLayout>
-
-                <carbon.widget.LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="35dp"
-                    android:orientation="horizontal">
-
-                    <carbon.widget.ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:scaleType="center"
-                        android:src="@drawable/password" />
-
-                    <carbon.widget.EditText
-                        android:id="@+id/password"
-                        style="@style/edit_text_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="18dp"
-                        android:layout_weight="1"
-                        android:background="@color/transparent"
-                        android:gravity="left|center"
-                        android:hint="Password"
-                        android:inputType="textPassword" />
-
-                    <carbon.widget.Button
-                        android:id="@+id/showSignInPassword"
-                        style="@style/plain_button_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_margin="0dip"
-                        android:layout_weight="0.2"
-                        android:gravity="right|bottom"
-                        android:text="SHOW"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </carbon.widget.LinearLayout>
-
-                <carbon.widget.Button
-                    android:id="@+id/forgetPassword"
-                    style="@style/plain_button_style"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="0.2"
-                    android:gravity="right|center"
-                    android:text="forgot password?" />
-
-                <carbon.widget.LinearLayout
-                    android:id="@+id/sectionButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="vertical"
-                    android:visibility="visible">
-
-                    <carbon.widget.Button
-                        android:id="@+id/signInButton"
-                        style="@style/submit_button_style"
-                        android:text="SIGN IN" />
-
-                    <carbon.widget.ProgressBar
-                        android:id="@+id/signInProgressBar"
-                        style="?android:attr/progressBarStyleInverse"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:indeterminate="true"
-                        android:visibility="gone" />
-                </carbon.widget.LinearLayout>
-
-                <carbon.widget.Button
-                    android:id="@+id/showSignUpForm"
-                    style="@style/plain_button_style"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="0.2"
-                    android:gravity="center"
-                    android:text="New here? Sign Up!" />
-            </carbon.widget.LinearLayout>
-
-            <carbon.widget.LinearLayout
-                android:id="@+id/signUpForm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <carbon.widget.EditText
-                    android:id="@+id/fullName"
-                    style="@style/edit_text_style"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:background="@color/transparent"
-                    android:gravity="left|center"
-                    android:hint="Full Name"
-                    android:inputType="phone" />
-
-                <carbon.widget.EditText
-                    android:id="@+id/email"
-                    style="@style/edit_text_style"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:background="@color/transparent"
-                    android:gravity="left|center"
-                    android:hint="Email"
-                    android:inputType="textWebEmailAddress" />
-
-                <carbon.widget.EditText
-                    android:id="@+id/signUpMobile"
-                    style="@style/edit_text_style"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:background="@color/transparent"
-                    android:gravity="left|center"
-                    android:hint="Mobile"
-                    android:inputType="phone" />
-
-                <carbon.widget.LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <carbon.widget.EditText
-                        android:id="@+id/signUpPassword"
-                        style="@style/edit_text_style"
-                        android:layout_width="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_weight="0.8"
-                        android:background="@color/transparent"
-                        android:gravity="left|center"
-                        android:hint="Password"
-                        android:inputType="textPassword" />
-
-                    <carbon.widget.Button
-                        android:id="@+id/showSignUpPassword"
-                        style="@style/plain_button_style"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="0.2"
-                        android:gravity="right|bottom"
-                        android:text="SHOW"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </carbon.widget.LinearLayout>
-
-                <Spinner
-                    android:id="@+id/bankName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:entries="@array/bank_name"
-                    android:gravity="left|center"
-                    android:prompt="@string/bank_prompt" />
-
-                <carbon.widget.EditText
-                    android:id="@+id/accountName"
-                    style="@style/edit_text_style"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:background="@color/transparent"
-                    android:gravity="left|center"
-                    android:hint="Account Name" />
-
-                <carbon.widget.EditText
-                    android:id="@+id/accountNumber"
-                    style="@style/edit_text_style"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:background="@color/transparent"
-                    android:gravity="left|center"
-                    android:hint="Account Number"
-                    android:inputType="number" />
-
-                <Spinner
-                    android:id="@+id/accountType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:entries="@array/account_type"
-                    android:gravity="left|center"
-                    android:prompt="@string/account_prompt" />
-
-                <carbon.widget.LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="vertical"
-                    android:visibility="visible">
-
-                    <carbon.widget.Button
-                        android:id="@+id/signUpButton"
-                        style="@style/submit_button_style"
-                        android:text="SIGN UP" />
-
-                    <carbon.widget.ProgressBar
-                        android:id="@+id/signUpProgressBar"
-                        style="?android:attr/progressBarStyleInverse"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:indeterminate="true"
-                        android:visibility="gone" />
-                </carbon.widget.LinearLayout>
-
-                <carbon.widget.Button
-                    android:id="@+id/showSignInForm"
-                    style="@style/plain_button_style"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="0.2"
-                    android:gravity="center"
-                    android:text="Already a member? Sign In!" />
-            </carbon.widget.LinearLayout>
-
-        </carbon.widget.LinearLayout>
-    </carbon.widget.ScrollView>
-
-    <carbon.widget.ProgressBar
-        android:id="@+id/defaultSplashProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:background="@xml/progress"
-        android:indeterminate="true"
-        android:visibility="visible" />
-
-</carbon.widget.LinearLayout>

@@ -18,7 +18,7 @@
     <color name="navy">#000080</color>
     <color name="black">#000000</color>
     <color name="otherblack">#444343</color>
-    <color name="textColor">#666666</color>
+    <color name="nav_item">#212121</color>
     <color name="subTextColor">#9B9B9B</color>
     <color name="otherGray">#F8F8F8</color>
     <color name="subTabs">#F5F5F5</color>
@@ -30,12 +30,10 @@
     <color name="background_off_white">#d7d7d7</color>
     <color name="background_grey">#fff4f4f4</color>
 
-    <color name="edittextfocus">#F5A623</color>
-    <color name="colorPrimary">#164012</color>
-    <color name="color_primary">#164012</color>
-    <color name="color_primary_dark">#ff546a1a</color>
+    <color name="colorPrimary">#ff546a1a</color>
+    <color name="colorPrimaryDark">#164012</color>
     <color name="text_color_primary">#ffffffff</color>
-    <color name="button_orange">#E94B0A</color>
+    <color name="colorAccent">#E94B0A</color>
     <color name="appBG">#E4E4E4</color>
 
     <!-- Deal Listing Colors -->

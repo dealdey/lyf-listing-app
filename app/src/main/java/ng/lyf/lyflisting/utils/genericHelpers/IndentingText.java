@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.utils;
+package ng.lyf.lyflisting.utils.genericHelpers;
 
 /**
  * Created by Swapnil on 3/19/2015.
