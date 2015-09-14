@@ -27,17 +27,13 @@ public class CustomAnimator {
             Animation animation = AnimationUtils.loadAnimation(context, R.anim.splash_translate);
             animation.setAnimationListener(new Animation.AnimationListener() {
                 @Override
-                public void onAnimationStart(Animation animation) {
-                }
+                public void onAnimationStart(Animation animation) {}
 
                 @Override
-                public void onAnimationEnd(Animation animation) {
-                    viewToReveal.animate().alpha(1f).setDuration(700);
-                }
+                public void onAnimationEnd(Animation animation) { viewToReveal.animate().alpha(1f).setDuration(700); }
 
                 @Override
-                public void onAnimationRepeat(Animation animation) {
-                }
+                public void onAnimationRepeat(Animation animation) {}
             });
 
             viewToSlideUp.setAnimation(animation);

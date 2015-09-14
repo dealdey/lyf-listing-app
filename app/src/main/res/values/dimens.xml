@@ -14,6 +14,8 @@
     <dimen name="space_small_xxx">15dp</dimen>
     <dimen name="space_small_xx">10dp</dimen>
     <dimen name="space_small_x">5dp</dimen>
+    <dimen name="space_small_ss">4dp</dimen>
+    <dimen name="space_small_s">3dp</dimen>
     <dimen name="space_small">2dp</dimen>
     <dimen name="space_custom">46dp</dimen>
 

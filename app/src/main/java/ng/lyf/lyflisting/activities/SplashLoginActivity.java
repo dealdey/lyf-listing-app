@@ -175,7 +175,8 @@ public class SplashLoginActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             CustomAnimator.animateLayoutChanges(enterForm);
-                            CustomAnimator.slideUpAndRevailView(logoArea, enterForm); }
+                            CustomAnimator.slideUpAndRevailView(logoArea, enterForm);
+                        }
                     });
                 }
             }
