@@ -13,9 +13,9 @@ import android.widget.ListView;
 
 import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.adapters.NavigationDrawerAdapter;
-import ng.lyf.lyflisting.fragments.main.BusinessesFragment;
-import ng.lyf.lyflisting.fragments.main.FragmentDrawer;
-import ng.lyf.lyflisting.fragments.main.MoneyFragment;
+import ng.lyf.lyflisting.fragments.home.BusinessesFragment;
+import ng.lyf.lyflisting.fragments.home.FragmentDrawer;
+import ng.lyf.lyflisting.fragments.home.MoneyFragment;
 import ng.lyf.lyflisting.utils.genericHelpers.Common;
 
 public class HomeActivityWithFragment extends BaseAppCompatActivityWithFragment {

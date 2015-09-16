@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.fragments.main;
+package ng.lyf.lyflisting.fragments.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
