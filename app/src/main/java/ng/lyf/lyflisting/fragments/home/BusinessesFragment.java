@@ -1,4 +1,4 @@
-package ng.lyf.lyflisting.fragments.main;
+package ng.lyf.lyflisting.fragments.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,7 +15,7 @@ import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 /**
  * Created by Ayoola.
  */
-public class MoneyFragment extends ListFragment {
+public class BusinessesFragment extends ListFragment {
 
     private View                        viewGroupAddButton;
     private View                        rootView;
@@ -24,9 +24,8 @@ public class MoneyFragment extends ListFragment {
     private HomeActivityWithFragment    activity;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_main_money, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.fragment_main_businesses, container, false);
         return rootView;
     }
 
@@ -43,14 +42,14 @@ public class MoneyFragment extends ListFragment {
         emptyView           = rootView.findViewById(R.id.empty_view);
         viewGroupAddButton  = rootView.findViewById(R.id.view_group_add_button);
 
-        activity.setTitle(R.string.my_money_page_title);
+        activity.setTitle(R.string.app_name);
 
         RippleEffect.addRippleToView(viewGroupAddButton);
 
         listView.setEmptyView(emptyView);
     }
 
-    public void initListeners() {
+    private void initListeners() {
         viewGroupAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,4 +59,5 @@ public class MoneyFragment extends ListFragment {
     }
 
     private void addBusiness() {}
+
 }
