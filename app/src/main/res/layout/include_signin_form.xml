@@ -11,14 +11,14 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx">
+        android:layout_marginBottom="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xxx">
 
         <EditText
             android:id="@+id/mobile"
             style="@style/edit_text_style"
             android:drawableLeft="@drawable/phone"
-            android:drawablePadding="@dimen/space_small_x"
+            android:drawablePadding="@dimen/space_small_xx"
             android:hint="@string/mobile"
             android:inputType="phone" />
 
@@ -27,17 +27,17 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/space_small"
-        android:layout_marginTop="@dimen/space_small_xx">
+        android:layout_marginBottom="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xxx">
 
         <EditText
             android:id="@+id/password"
             style="@style/edit_text_style"
             android:drawableLeft="@drawable/password"
-            android:drawablePadding="@dimen/space_small_x"
+            android:drawablePadding="@dimen/space_small_xx"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:paddingRight="@dimen/space_custom" />
+            android:paddingRight="@dimen/space_large_xxx_c" />
 
         <Button
             android:id="@+id/showSignInPassword"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:padding="@dimen/space_small_x"
+            android:padding="@dimen/space_small_xx"
             android:text="@string/show"
             android:textSize="@dimen/text_small"
             android:textStyle="bold" />
@@ -56,10 +56,10 @@
         style="@style/plain_button_style"
         android:layout_width="wrap_content"
         android:layout_gravity="right|bottom"
-        android:layout_marginTop="@dimen/space_small_x"
+        android:layout_marginTop="@dimen/space_small_xx"
         android:layout_weight="0.2"
         android:gravity="right|center"
-        android:padding="@dimen/space_small_x"
+        android:padding="@dimen/space_small_xx"
         android:text="@string/forgot_password" />
 
     <LinearLayout

@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_small_x">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card"
+        style="@style/card_view_style">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_small_xx">
+
+            <Spinner
+                android:id="@+id/bankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small_xx"
+                android:entries="@array/bank_name"
+                android:gravity="left|center"
+                android:prompt="@string/bank_prompt" />
+
+            <View
+                style="@style/white_line_view_style"
+                android:layout_marginBottom="@dimen/space_small"
+                android:background="@color/light_grey" />
+
+            <EditText
+                android:id="@+id/accountName"
+                style="@style/edit_text_style"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small_xxx"
+                android:backgroundTint="@color/light_grey"
+                android:gravity="left|center"
+                android:hint="@string/account_name"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+            <EditText
+                android:id="@+id/accountNumber"
+                style="@style/edit_text_style"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small_xxx"
+                android:backgroundTint="@color/light_grey"
+                android:gravity="left|center"
+                android:hint="@string/account_number"
+                android:inputType="number"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+            <Spinner
+                android:id="@+id/accountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small_xx"
+                android:entries="@array/account_type"
+                android:gravity="left|center"
+                android:prompt="@string/account_prompt" />
+
+            <View
+                style="@style/white_line_view_style"
+                android:layout_marginBottom="@dimen/space_small"
+                android:background="@color/light_grey" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_small_xxx"
+        android:layout_marginLeft="@dimen/space_small_xx"
+        android:layout_marginRight="@dimen/space_small_xx"
+        android:layout_marginTop="@dimen/space_small_x"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/submit_button_style"
+            android:text="@string/save" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
