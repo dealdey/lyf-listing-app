@@ -1,5 +1,6 @@
 package ng.lyf.lyflisting.fragments.accountHelpers;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.activities.AccountHelperActivityWithFragment;
+import ng.lyf.lyflisting.activities.HomeActivityWithFragment;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 import ng.lyf.lyflisting.utils.genericHelpers.Common;
 
@@ -88,6 +90,7 @@ public class ResetPasswordFragment extends Fragment {
 
     private void savePassword(){
         Toast.makeText(getActivity(), "Successfully reset your password", Toast.LENGTH_LONG).show();
+        startActivity(new Intent(activity, HomeActivityWithFragment.class));
         activity.finish();
     }
 }

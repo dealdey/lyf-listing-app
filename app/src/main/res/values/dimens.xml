@@ -4,20 +4,23 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_drawer_width">260dp</dimen>
 
+    <dimen name="space_xxx_large">200dp</dimen>
     <dimen name="space_xx_large">150dp</dimen>
     <dimen name="space_x_large">100dp</dimen>
+    <dimen name="space_large_xxx_c">46dp</dimen>
     <dimen name="space_large_xxx">40dp</dimen>
     <dimen name="space_large_xx">35dp</dimen>
     <dimen name="space_large">30dp</dimen>
     <dimen name="space_medium_x">25dp</dimen>
     <dimen name="space_medium">20dp</dimen>
     <dimen name="space_small_xxx">15dp</dimen>
+    <dimen name="space_small_xx_cc">12dp</dimen>
+    <dimen name="space_small_xx_c">11dp</dimen>
     <dimen name="space_small_xx">10dp</dimen>
     <dimen name="space_small_x">5dp</dimen>
     <dimen name="space_small_ss">4dp</dimen>
     <dimen name="space_small_s">3dp</dimen>
     <dimen name="space_small">2dp</dimen>
-    <dimen name="space_custom">46dp</dimen>
 
     <dimen name="text_xxx_large">32sp</dimen>
     <dimen name="text_xx_large">30sp</dimen>
@@ -27,7 +30,7 @@
     <dimen name="text_large_x">22sp</dimen>
     <dimen name="text_large">20sp</dimen>
     <dimen name="text_medium_x">18sp</dimen>
-    <dimen name="text_medium">16dp</dimen>
+    <dimen name="text_medium">16sp</dimen>
     <dimen name="text_small_xx">14sp</dimen>
     <dimen name="text_small_x">12sp</dimen>
     <dimen name="text_small">10sp</dimen>

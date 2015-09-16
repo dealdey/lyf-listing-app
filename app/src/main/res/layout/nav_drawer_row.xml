@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/space_small_xx_cc"
+    android:paddingLeft="@dimen/space_medium"
+    android:paddingRight="@dimen/space_medium"
+    android:paddingTop="@dimen/space_small_xx_cc">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:scaleType="center"
+        android:src="@drawable/arrow_down_gray" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/space_medium"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/nav_item"
+        android:textSize="@dimen/text_medium" />
+
+    <TextView
+        android:id="@+id/businessCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/space_small_xx"
+        android:layout_marginRight="@dimen/space_small_xx"
+        android:gravity="center"
+        android:padding="@dimen/space_small_x"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold" />
+
+</LinearLayout>

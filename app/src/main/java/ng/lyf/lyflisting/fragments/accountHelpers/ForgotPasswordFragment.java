@@ -69,9 +69,9 @@ public class ForgotPasswordFragment extends Fragment {
 
         showResetPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { activity.contentFragmentSwitcher(Constants.RESET_PASSWORD); }
+            public void onClick(View v) { activity.contentFragmentSwitcher(Constants.RESET_PASSWORD_FRAGMENT); }
         });
     }
 
-    private void sendCode() { activity.contentFragmentSwitcher(Constants.RESET_PASSWORD); }
+    private void sendCode() { activity.contentFragmentSwitcher(Constants.RESET_PASSWORD_FRAGMENT); }
 }

@@ -64,7 +64,7 @@ public class VerifyPhoneFragment extends Fragment {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.contentFragmentSwitcher(Constants.UPDATE_BANK);
+                activity.contentFragmentSwitcher(Constants.UPDATE_BANK_FRAGMENT);
             }
         });
         verifyButton.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +94,7 @@ public class VerifyPhoneFragment extends Fragment {
     private void verifyPhone() {
         //Connect to server and verify phone
 
-        activity.contentFragmentSwitcher(Constants.UPDATE_BANK);
+        activity.contentFragmentSwitcher(Constants.UPDATE_BANK_FRAGMENT);
         isLoading = false;
     }
 

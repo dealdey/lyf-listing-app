@@ -31,16 +31,16 @@ public class AccountHelperActivityWithFragment extends BaseAppCompatActivityWith
 
     public void contentFragmentSwitcher(int targetFragmentInt) {
         switch (targetFragmentInt) {
-            case Constants.VERIFY_PHONE:
+            case Constants.VERIFY_PHONE_FRAGMENT:
                 Common.replaceContentFragment(this, contentID, new VerifyPhoneFragment());
                 break;
-            case Constants.UPDATE_BANK:
+            case Constants.UPDATE_BANK_FRAGMENT:
                 Common.replaceContentFragment(this, contentID, new UpdateBankDetailsFragment());
                 break;
-            case Constants.FORGOT_PASSWORD:
+            case Constants.FORGOT_PASSWORD_FRAGMENT:
                 Common.replaceContentFragment(this, contentID, new ForgotPasswordFragment());
                 break;
-            case Constants.RESET_PASSWORD:
+            case Constants.RESET_PASSWORD_FRAGMENT:
                 Common.replaceContentFragment(this, contentID, new ResetPasswordFragment());
                 break;
         }

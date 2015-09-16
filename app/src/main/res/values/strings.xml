@@ -17,7 +17,7 @@
     <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
 
-    <string name="money">My Money</string>
+    <string name="my_money_page_title">My Money</string>
     <string name="settings">Settings</string>
     <string name="show">SHOW</string>
     <string name="hide">HIDE</string>
@@ -54,5 +54,9 @@
     <string name="skip">Skip</string>
     <string name="verify">Verify</string>
     <string name="enter_phone_verification_code">Enter phone verification code</string>
+    <string name="add_now">ADD NOW</string>
+    <string name="add_business">ADD BUSINESS</string>
+    <string name="no_balance_available">No Balance Available!</string>
+    <string name="no_business_added">No Business Added!</string>
 
 </resources>

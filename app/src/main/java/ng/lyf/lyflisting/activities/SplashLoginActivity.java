@@ -187,7 +187,7 @@ public class SplashLoginActivity extends AppCompatActivity {
 
     private void forgotPassword() {
         Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivityWithFragment.class);
-        intent.putExtra(Constants.FRAGMENT_TAG, Constants.FORGOT_PASSWORD);
+        intent.putExtra(Constants.FRAGMENT_TAG, Constants.FORGOT_PASSWORD_FRAGMENT);
         startActivity(intent);
         finish();
     }
@@ -196,7 +196,7 @@ public class SplashLoginActivity extends AppCompatActivity {
 
     private void showVerifyPhonePage(){
         Intent intent = new Intent(SplashLoginActivity.this, AccountHelperActivityWithFragment.class);
-        intent.putExtra(Constants.FRAGMENT_TAG, Constants.VERIFY_PHONE);
+        intent.putExtra(Constants.FRAGMENT_TAG, Constants.VERIFY_PHONE_FRAGMENT);
         startActivity(intent);
         finish();
     }

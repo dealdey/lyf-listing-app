@@ -1,5 +1,6 @@
 package ng.lyf.lyflisting.fragments.accountHelpers;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,8 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import ng.lyf.lyflisting.Constants;
 import ng.lyf.lyflisting.R;
 import ng.lyf.lyflisting.activities.AccountHelperActivityWithFragment;
+import ng.lyf.lyflisting.activities.HomeActivityWithFragment;
 import ng.lyf.lyflisting.utils.animationHelper.RippleEffect;
 import ng.lyf.lyflisting.utils.genericHelpers.Common;
 
@@ -73,6 +76,9 @@ public class UpdateBankDetailsFragment extends Fragment implements AdapterView.O
         Common.hideKeyboard(activity, getView());
         saveButton.setVisibility(View.GONE);
         progressBar.setVisibility(View.VISIBLE);
+
+        startActivity(new Intent(activity, HomeActivityWithFragment.class));
+        activity.finish();
     }
 
     @Override

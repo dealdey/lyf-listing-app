@@ -37,7 +37,7 @@
             android:drawablePadding="@dimen/space_small_xx"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:paddingRight="@dimen/space_custom" />
+            android:paddingRight="@dimen/space_large_xxx_c" />
 
         <Button
             android:id="@+id/showSignInPassword"
